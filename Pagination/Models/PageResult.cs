@@ -9,10 +9,20 @@ namespace Pagination.Models
     {
         public PageRequest Request { get; set; }
 
-        public int Count => Data.Count();
+        public int Count { get; set; }
 
         public int Total { get; set; }
 
         public IEnumerable<T> Data { get; set; }
+
+        public PageResult() { }
+
+        public PageResult(IEnumerable<T> data, PageRequest request, int total)
+        {
+            Data = data;
+            Count = Data.Count();
+            Request = request;
+            Total = total;
+        }
     }
 }
