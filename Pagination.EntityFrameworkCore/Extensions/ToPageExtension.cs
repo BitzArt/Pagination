@@ -20,18 +20,11 @@ namespace Pagination.EntityFrameworkCore
         {
             var data = await query.ToListAsync();
 
-            if ((data is IPagedQueryable<T>) == false)
-            {
-                var total = await query.CountAsync();
-                return new PageResult<T>(data, null, total);
-            }
-            return null;
-            /*else
-            {
-                var pagedQuery = query as IPagedQueryable<T>;
-                var total = await pagedQuery.UnpaginatedQuery.CountAsync();
-                return new PageResult<T>(data, pagedQuery.PageRequest, total);
-            }*/
+            if ((data is IPagedQueryable<T>) == false) return new PageResult<T>(data, null, await query.CountAsync());
+
+            var pagedQuery = query as IPagedQueryable<T>;
+            var total = await pagedQuery.UnpaginatedQuery.CountAsync();
+            return new PageResult<T>(data, pagedQuery.PageRequest, total);
         }
     }
 }
