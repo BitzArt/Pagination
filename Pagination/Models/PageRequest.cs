@@ -8,5 +8,11 @@ namespace Pagination.Models
     {
         public int Skip { get; set; }
         public int Take { get; set; }
+
+        public PageRequest(int skip, int take)
+        {
+            Skip = skip;
+            Take = take;
+        }
     }
 }

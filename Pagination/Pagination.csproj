@@ -6,6 +6,7 @@
     <AssemblyName>BitzArt.Pagination</AssemblyName>
 
     <PackageId>BitzArt.Pagination</PackageId>
+    <Authors>BitzArt</Authors>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/BitzArt/Pagination</RepositoryUrl>
   </PropertyGroup>
