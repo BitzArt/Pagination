@@ -37,8 +37,8 @@ jobs:
       - name: Push
         run: dotnet nuget push BitzArt.Pagination.${VERSION}.nupkg --source https://api.nuget.org/v3/index.json --api-key ${NUGET_APIKEY}
 
-  Pagination.EntityFrameworkCore:
-    name: Pagination.EntityFrameworkCore
+  Pagination-EntityFrameworkCore:
+    name: Pagination-EntityFrameworkCore
     runs-on: ubuntu-latest
     steps:
 
