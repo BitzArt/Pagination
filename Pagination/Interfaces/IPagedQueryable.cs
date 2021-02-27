@@ -9,6 +9,6 @@ namespace Pagination.Interfaces
     public interface IPagedQueryable<T> : IQueryable<T>
     {
         PageRequest PageRequest { get; set; }
-        IQueryable UnpaginatedQuery { get; set; }
+        IQueryable<T> UnpaginatedQuery { get; set; }
     }
 }
