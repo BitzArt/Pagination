@@ -13,7 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pagination.EntityFrameworkC
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests", "Pagination\Tests\Tests.csproj", "{FF20022C-66CA-40BB-B10A-EBDBF3CE86D4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Pagination.EntityFrameworkCore\Tests\Tests.csproj", "{FA721215-752D-4A16-BDC5-4123302155F1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pagination.EntityFrameworkCore.Tests", "Pagination.EntityFrameworkCore\Tests\Pagination.EntityFrameworkCore.Tests.csproj", "{FA721215-752D-4A16-BDC5-4123302155F1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

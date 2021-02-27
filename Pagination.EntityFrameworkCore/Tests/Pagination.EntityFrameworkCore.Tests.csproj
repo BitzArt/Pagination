@@ -22,7 +22,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Pagination\Pagination.csproj" />
     <ProjectReference Include="..\..\Pagination\Tests\Tests.csproj" />
+    <ProjectReference Include="..\Pagination.EntityFrameworkCore.csproj" />
   </ItemGroup>
 
 </Project>
