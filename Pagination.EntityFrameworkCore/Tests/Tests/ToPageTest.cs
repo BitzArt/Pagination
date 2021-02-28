@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xunit;
+using Newtonsoft.Json;
 
 namespace Pagination.EntityFrameworkCore.Tests
 {
@@ -34,7 +35,10 @@ namespace Pagination.EntityFrameworkCore.Tests
                 var p = context.Users.Paginate(request);
                 var paged = p.ToPage();
 
-                Assert.Equal(result, paged);
+                var resultSerialized = JsonConvert.SerializeObject(result);
+                var pagedSerialized = JsonConvert.SerializeObject(paged);
+
+                Assert.Equal(resultSerialized, pagedSerialized);
             }
         }
     }

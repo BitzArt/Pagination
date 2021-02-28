@@ -11,7 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pagination", "Pagination", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pagination.EntityFrameworkCore", "Pagination.EntityFrameworkCore", "{3BC5B13E-DCF4-4357-91C5-FA38C3E8635A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests", "Pagination\Tests\Tests.csproj", "{FF20022C-66CA-40BB-B10A-EBDBF3CE86D4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pagination.Tests", "Pagination\Tests\Pagination.Tests.csproj", "{FF20022C-66CA-40BB-B10A-EBDBF3CE86D4}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pagination.EntityFrameworkCore.Tests", "Pagination.EntityFrameworkCore\Tests\Pagination.EntityFrameworkCore.Tests.csproj", "{FA721215-752D-4A16-BDC5-4123302155F1}"
 EndProject

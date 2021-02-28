@@ -16,12 +16,12 @@ namespace Pagination.EntityFrameworkCore
             return query.ToPageAsync().Result;
         }
 
-        public static async Task<PageResult<T>> ToPageAsync<T>(this IPagedQueryable<T> query)
+        public static async Task<PageResult<T>> ToPageAsync<T>(this IPagedQueryable<T> pagedQuery)
         {
-            var data = await query.ToListAsync();
+            var data = await pagedQuery.Query.ToListAsync();
 
-            var total = await query.UnpaginatedQuery.CountAsync();
-            return new PageResult<T>(data, query.PageRequest, total);
+            var total = await pagedQuery.Query.CountAsync();
+            return new PageResult<T>(data, pagedQuery.PageRequest, total);
         }
     }
 }
