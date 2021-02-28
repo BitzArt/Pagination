@@ -1,7 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Pagination;
-using Pagination.Interfaces;
-using Pagination.Models;
+﻿using BitzArt.Pagination.Interfaces;
+using BitzArt.Pagination.Models;
+using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System.Threading.Tasks;
 

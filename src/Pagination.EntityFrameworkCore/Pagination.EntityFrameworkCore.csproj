@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="BitzArt.Pagination" Version="0.1.1" />
+    <PackageReference Include="BitzArt.Pagination" Version="0.2.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.3" />
   </ItemGroup>
 

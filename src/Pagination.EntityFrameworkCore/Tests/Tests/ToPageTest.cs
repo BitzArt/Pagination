@@ -1,4 +1,12 @@
-﻿using System.Threading.Tasks;
+﻿using BitzArt.Pagination.EntityFrameworkCore;
+using BitzArt.Pagination.Models;
+using BitzArt.Pagination.Tests.Contexts;
+using BitzArt.Pagination.Tests.Extensions;
+using BitzArt.Pagination.Tests.Models;
+using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
+using System.Linq;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace BitzArt.Pagination.Tests
@@ -12,7 +20,7 @@ namespace BitzArt.Pagination.Tests
         [InlineData(10, 10)]
         public async Task ToPage(int skip, int take)
         {
-            /*var context = InMemoryContext.Instance;
+            var context = InMemoryContext.Instance;
             context.CreateUsers(skip + take);
 
             var request = new PageRequest(skip, take);
@@ -26,7 +34,7 @@ namespace BitzArt.Pagination.Tests
             var resultSerialized = JsonConvert.SerializeObject(result);
             var pagedSerialized = JsonConvert.SerializeObject(paged);
 
-            Assert.Equal(resultSerialized, pagedSerialized);*/
+            Assert.Equal(resultSerialized, pagedSerialized);
         }
     }
 }
