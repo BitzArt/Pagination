@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using Xunit;
 using Newtonsoft.Json;
 using Microsoft.EntityFrameworkCore;
+using Pagination.EntityFrameworkCore;
 
 namespace Pagination.Tests
 {
@@ -31,13 +32,12 @@ namespace Pagination.Tests
             var total = context.Users.Count();
             var result = new PageResult<User>(data, request, total);
 
-            var p = context.Users.Paginate(request);
-            //var paged = p.ToPage();
+            var paged = context.Users.ToPage(request);
 
             var resultSerialized = JsonConvert.SerializeObject(result);
-            //var pagedSerialized = JsonConvert.SerializeObject(paged);
+            var pagedSerialized = JsonConvert.SerializeObject(paged);
 
-            //Assert.Equal(resultSerialized, pagedSerialized);
+            Assert.Equal(resultSerialized, pagedSerialized);
         }
     }
 }

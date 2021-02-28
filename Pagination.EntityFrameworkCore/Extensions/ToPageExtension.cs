@@ -11,6 +11,16 @@ namespace Pagination.EntityFrameworkCore
 {
     public static class ToPageExtension
     {
+        public static PageResult<T> ToPage<T>(this IQueryable<T> query, PageRequest request)
+        {
+            return ToPageAsync(query, request).Result;
+        }
+
+        public static async Task<PageResult<T>> ToPageAsync<T>(this IQueryable<T> query, PageRequest request)
+        {
+            return await ToPageAsync(query.Paginate(request));
+        }
+
         public static PageResult<T> ToPage<T>(this IPagedQueryable<T> query)
         {
             return ToPageAsync(query).Result;
