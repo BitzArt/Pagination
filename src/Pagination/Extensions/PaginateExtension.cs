@@ -1,24 +1,20 @@
-﻿using Pagination.Interfaces;
-using Pagination.Models;
-using System;
-using System.Collections.Generic;
+﻿using BitzArt.Pagination.Interfaces;
+using BitzArt.Pagination.Models;
 using System.Linq;
-using System.Reflection;
-using System.Text;
 
-namespace Pagination
+namespace BitzArt.Pagination
 {
     public static class PaginateExtension
     {
         public static IPagedQueryable<T> Paginate<T>(this IQueryable<T> query, int skip, int take)
         {
             var request = new PageRequest(skip, take);
-            return Paginate<T>(query, request);
+            return query.Paginate(request);
         }
 
         public static IPagedQueryable<T> Paginate<T>(this IQueryable<T> query, PageRequest request = null)
         {
-            if (query is PagedQueryable<T>) return (query as PagedQueryable<T>);
+            if (query is PagedQueryable<T>) return query as PagedQueryable<T>;
 
             var result = new PagedQueryable<T>();
             result.Query = query;

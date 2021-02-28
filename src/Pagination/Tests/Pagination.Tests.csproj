@@ -5,7 +5,7 @@
 
     <IsPackable>false</IsPackable>
 
-    <RootNamespace>Pagination.Tests</RootNamespace>
+    <RootNamespace>BitzArt.Pagination.Tests</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

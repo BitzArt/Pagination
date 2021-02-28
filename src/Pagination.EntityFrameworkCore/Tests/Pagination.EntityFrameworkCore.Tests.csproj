@@ -5,7 +5,7 @@
 
     <IsPackable>false</IsPackable>
 
-    <RootNamespace>Pagination.EntityFrameworkCore.Tests</RootNamespace>
+    <RootNamespace>BitzArt.Pagination.EntityFrameworkCore.Tests</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

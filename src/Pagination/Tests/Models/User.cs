@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Text;
 
-namespace Pagination.Tests.Models
+namespace BitzArt.Pagination.Tests.Models
 {
     [Table("users")]
     public class User

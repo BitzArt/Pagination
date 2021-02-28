@@ -1,10 +1,7 @@
-﻿using Pagination.Models;
-using System;
-using System.Collections.Generic;
+﻿using BitzArt.Pagination.Models;
 using System.Linq;
-using System.Text;
 
-namespace Pagination.Interfaces
+namespace BitzArt.Pagination.Interfaces
 {
     public interface IPagedQueryable<T> : IQueryable<T>
     {

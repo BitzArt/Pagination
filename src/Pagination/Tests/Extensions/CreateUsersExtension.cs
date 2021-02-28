@@ -1,10 +1,8 @@
-﻿using Pagination.Tests.Contexts;
-using Pagination.Tests.Models;
-using System;
+﻿using BitzArt.Pagination.Tests.Contexts;
+using BitzArt.Pagination.Tests.Models;
 using System.Collections.Generic;
-using System.Text;
 
-namespace Pagination.Tests.Extensions
+namespace BitzArt.Pagination.Tests.Extensions
 {
     public static class CreateUsersExtension
     {

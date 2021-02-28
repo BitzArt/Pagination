@@ -1,16 +1,12 @@
-using Microsoft.EntityFrameworkCore;
+using BitzArt.Pagination.Models;
+using BitzArt.Pagination.Tests.Contexts;
+using BitzArt.Pagination.Tests.Extensions;
 using Newtonsoft.Json;
-using Pagination.Models;
-using Pagination.Tests.Contexts;
-using Pagination.Tests.Extensions;
-using Pagination.Tests.Models;
-using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Pagination.Tests
+namespace BitzArt.Pagination.Tests
 {
     public class PaginationTest
     {

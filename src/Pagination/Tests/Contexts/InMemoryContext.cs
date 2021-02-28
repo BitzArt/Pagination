@@ -1,13 +1,9 @@
-﻿using Microsoft.Data.Sqlite;
+﻿using BitzArt.Pagination.Tests.Models;
+using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
-using Pagination.Tests.Models;
-using System;
-using System.Collections.Generic;
 using System.Data.Common;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Pagination.Tests.Contexts
+namespace BitzArt.Pagination.Tests.Contexts
 {
     public class InMemoryContext : DbContext
     {

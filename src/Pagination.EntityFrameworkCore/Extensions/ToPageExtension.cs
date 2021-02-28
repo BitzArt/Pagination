@@ -1,41 +1,39 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Pagination;
 using Pagination.Interfaces;
 using Pagination.Models;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
-namespace Pagination.EntityFrameworkCore
+namespace BitzArt.Pagination.EntityFrameworkCore
 {
     public static class ToPageExtension
     {
         public static PageResult<T> ToPage<T>(this IQueryable<T> query, int skip, int take)
         {
             var request = new PageRequest(skip, take);
-            return ToPage(query, request);
+            return query.ToPage(request);
         }
 
         public static async Task<PageResult<T>> ToPageAsync<T>(this IQueryable<T> query, int skip, int take)
         {
             var request = new PageRequest(skip, take);
-            return await ToPageAsync(query, request);
+            return await query.ToPageAsync(request);
         }
 
         public static PageResult<T> ToPage<T>(this IQueryable<T> query, PageRequest request)
         {
-            return ToPageAsync(query, request).Result;
+            return query.ToPageAsync(request).Result;
         }
 
         public static async Task<PageResult<T>> ToPageAsync<T>(this IQueryable<T> query, PageRequest request)
         {
-            return await ToPageAsync(query.Paginate(request));
+            return await query.Paginate(request).ToPageAsync();
         }
 
         public static PageResult<T> ToPage<T>(this IPagedQueryable<T> query)
         {
-            return ToPageAsync(query).Result;
+            return query.ToPageAsync().Result;
         }
 
         public static async Task<PageResult<T>> ToPageAsync<T>(this IPagedQueryable<T> query)
