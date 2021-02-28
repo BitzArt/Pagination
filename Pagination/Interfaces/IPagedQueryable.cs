@@ -10,5 +10,6 @@ namespace Pagination.Interfaces
     {
         PageRequest PageRequest { get; set; }
         IQueryable<T> Query { get; set; }
+        IQueryable<T> UnpaginatedQuery { get; set; }
     }
 }

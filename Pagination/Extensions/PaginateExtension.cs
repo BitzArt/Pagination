@@ -22,16 +22,11 @@ namespace Pagination
 
             var result = new PagedQueryable<T>();
             result.Query = query;
+            result.UnpaginatedQuery = query;
 
-            if (request == null)
-                return result;
-
-            query = query
-                .Skip(request.Skip)
-                .Take(request.Take);
-
-            result.Query = query;
+            if (request == null) return result;
             result.PageRequest = request;
+            result.Query = query.Skip(request.Skip).Take(request.Take);
 
             return result;
         }

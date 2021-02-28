@@ -12,6 +12,7 @@ namespace Pagination.Models
     {
         public PageRequest PageRequest { get; set; }
         public IQueryable<T> Query { get; set; }
+        public IQueryable<T> UnpaginatedQuery { get; set; }
 
         public Type ElementType => Query.ElementType;
 

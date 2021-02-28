@@ -11,6 +11,17 @@ namespace Pagination.Tests.Contexts
 {
     public class InMemoryContext : DbContext
     {
+        private static InMemoryContext instance { get; set; } = null;
+
+        public static InMemoryContext Instance
+        {
+            get
+            {
+                if (instance == null) instance = new InMemoryContext();
+                return instance;
+            }
+        }
+
         public DbSet<User> Users { get; set; }
 
         public InMemoryContext()
@@ -27,7 +38,6 @@ namespace Pagination.Tests.Contexts
         {
             Connection = new SqliteConnection("Filename=:memory:");
             Connection.Open();
-
             return Connection;
         }
 

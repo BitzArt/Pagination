@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 using Pagination.Models;
 using Pagination.Tests.Contexts;
 using Pagination.Tests.Extensions;
@@ -6,6 +7,7 @@ using Pagination.Tests.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace Pagination.Tests
@@ -17,24 +19,25 @@ namespace Pagination.Tests
         [InlineData(0, 10)]
         [InlineData(0, 100)]
         [InlineData(10, 10)]
-        public void Paginate(int skip, int take)
+        public async Task Paginate(int skip, int take)
         {
-            using (var context = new InMemoryContext())
-            {
-                context.CreateUsers(take);
+            var context = InMemoryContext.Instance;
+            context.CreateUsers(skip + take);
 
-                var q = context.Users.AsQueryable();
+            var q = context.Users.AsQueryable();
+            var request = new PageRequest(skip, take);
 
-                var result = q.Skip(skip).Take(take).ToList();
+            var result = await q.Skip(skip).Take(take).ToListAsync();
 
-                var pageRequest = new PageRequest(skip, take);
-                var paged1 = q.Paginate(pageRequest).ToList();
+            var paged1 = await q.Paginate(skip, take).ToListAsync();
+            var paged2 = await q.Paginate(request).ToListAsync();
 
-                var paged2 = q.Paginate(skip, take).ToList();
+            var resultSerialized = JsonConvert.SerializeObject(result);
+            var pagedSerialized1 = JsonConvert.SerializeObject(paged1);
+            var pagedSerialized2 = JsonConvert.SerializeObject(paged2);
 
-                Assert.Equal(result, paged1);
-                Assert.Equal(result, paged2);
-            }
+            Assert.Equal(resultSerialized, pagedSerialized1);
+            Assert.Equal(resultSerialized, pagedSerialized2);
         }
     }
 }
