@@ -27,10 +27,10 @@ namespace Pagination.Tests
             var q = context.Users.AsQueryable();
             var request = new PageRequest(skip, take);
 
-            var result = await q.Skip(skip).Take(take).ToListAsync();
+            var result = q.Skip(skip).Take(take).ToList();
 
-            var paged1 = await q.Paginate(skip, take).ToListAsync();
-            var paged2 = await q.Paginate(request).ToListAsync();
+            var paged1 = q.Paginate(skip, take).ToList();
+            var paged2 = q.Paginate(request).ToList();
 
             var resultSerialized = JsonConvert.SerializeObject(result);
             var pagedSerialized1 = JsonConvert.SerializeObject(paged1);

@@ -19,10 +19,9 @@ namespace Pagination.EntityFrameworkCore
         public static async Task<PageResult<T>> ToPageAsync<T>(this IPagedQueryable<T> query)
         {
             var data = await query.Query.ToListAsync();
-            //var total = query.UnpaginatedQuery.CountAsync();
+            var total = await query.UnpaginatedQuery.CountAsync();
 
-            //return new PageResult<T>(data, query.PageRequest, total);
-            return new PageResult<T>(data, query.PageRequest, 0);
+            return new PageResult<T>(data, query.PageRequest, total);
         }
     }
 }
