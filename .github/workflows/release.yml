@@ -30,9 +30,9 @@ jobs:
 
       - name: Build
         run: |
-          dotnet build Pagination/Pagination.csproj --configuration Release /p:Version=${VERSION}
-          dotnet test Pagination/Pagination.csproj --configuration Release /p:Version=${VERSION} --no-build
-          dotnet pack Pagination/Pagination.csproj --configuration Release /p:Version=${VERSION} --no-build --output .
+          dotnet build src/Pagination/Pagination.csproj --configuration Release /p:Version=${VERSION}
+          dotnet test src/Pagination/Pagination.csproj --configuration Release /p:Version=${VERSION} --no-build
+          dotnet pack src/Pagination/Pagination.csproj --configuration Release /p:Version=${VERSION} --no-build --output .
 
       - name: Push
         run: dotnet nuget push BitzArt.Pagination.${VERSION}.nupkg --source https://api.nuget.org/v3/index.json --api-key ${NUGET_APIKEY}
@@ -55,9 +55,9 @@ jobs:
 
       - name: Build
         run: |
-          dotnet build Pagination.EntityFrameworkCore/Pagination.EntityFrameworkCore.csproj --configuration Release /p:Version=${VERSION}
-          dotnet test Pagination.EntityFrameworkCore/Pagination.EntityFrameworkCore.csproj --configuration Release /p:Version=${VERSION} --no-build
-          dotnet pack Pagination.EntityFrameworkCore/Pagination.EntityFrameworkCore.csproj --configuration Release /p:Version=${VERSION} --no-build --output .
+          dotnet build src/Pagination.EntityFrameworkCore/Pagination.EntityFrameworkCore.csproj --configuration Release /p:Version=${VERSION}
+          dotnet test src/Pagination.EntityFrameworkCore/Pagination.EntityFrameworkCore.csproj --configuration Release /p:Version=${VERSION} --no-build
+          dotnet pack src/Pagination.EntityFrameworkCore/Pagination.EntityFrameworkCore.csproj --configuration Release /p:Version=${VERSION} --no-build --output .
 
       - name: Push
         run: dotnet nuget push BitzArt.Pagination.EntityFrameworkCore.${VERSION}.nupkg --source https://api.nuget.org/v3/index.json --api-key ${NUGET_APIKEY}
