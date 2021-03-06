@@ -30,11 +30,14 @@ namespace BitzArt.Pagination.Tests
             var result = new PageResult<User>(data, request, total);
 
             var paged = context.Users.ToPage(request);
+            var pagedAsync = await context.Users.ToPageAsync(request);
 
             var resultSerialized = JsonConvert.SerializeObject(result);
             var pagedSerialized = JsonConvert.SerializeObject(paged);
+            var pagedAsyncSerialized = JsonConvert.SerializeObject(pagedAsync);
 
             Assert.Equal(resultSerialized, pagedSerialized);
+            Assert.Equal(resultSerialized, pagedAsyncSerialized);
         }
     }
 }

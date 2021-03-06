@@ -1,6 +1,6 @@
-﻿using BitzArt.Pagination.Interfaces;
-using BitzArt.Pagination.Models;
+﻿using BitzArt.Pagination.Models;
 using Microsoft.EntityFrameworkCore;
+using System;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -20,27 +20,26 @@ namespace BitzArt.Pagination.EntityFrameworkCore
             return await query.ToPageAsync(request);
         }
 
-        public static PageResult<T> ToPage<T>(this IQueryable<T> query, PageRequest request)
+        public static PageResult<T> ToPage<T>(this IQueryable<T> query, PageRequest request = null)
         {
             return query.ToPageAsync(request).Result;
         }
 
-        public static async Task<PageResult<T>> ToPageAsync<T>(this IQueryable<T> query, PageRequest request)
+        public static async Task<PageResult<T>> ToPageAsync<T>(this IQueryable<T> query, PageRequest request = null)
         {
-            return await query.Paginate(request).ToPageAsync();
-        }
+            var paged = query as PagedQueryable<T>;
+            if (paged == null)
+            {
+                if (request == null) throw new Exception("Unable to make page without page request");
+                paged = query.Paginate(request) as PagedQueryable<T>;
+            }
 
-        public static PageResult<T> ToPage<T>(this IPagedQueryable<T> query)
-        {
-            return query.ToPageAsync().Result;
-        }
+            request = paged.PageRequest;
 
-        public static async Task<PageResult<T>> ToPageAsync<T>(this IPagedQueryable<T> query)
-        {
-            var data = await query.Query.ToListAsync();
-            var total = await query.UnpaginatedQuery.CountAsync();
+            var data = await paged.Query.Skip(request.Skip).Take(request.Take).ToListAsync();
+            var total = await paged.Query.CountAsync();
 
-            return new PageResult<T>(data, query.PageRequest, total);
+            return new PageResult<T>(data, request, total);
         }
     }
 }
