@@ -31,7 +31,7 @@ namespace BitzArt.Pagination.EntityFrameworkCore
             if (paged == null)
             {
                 if (request == null) throw new Exception("Unable to make page without page request");
-                paged = query.Paginate(request) as PagedQueryable<T>;
+                paged = new PagedQueryable<T>(query, request);
             }
 
             request = paged.PageRequest;
