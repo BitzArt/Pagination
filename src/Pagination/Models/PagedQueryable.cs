@@ -20,5 +20,19 @@ namespace BitzArt.Pagination.Models
         public IEnumerator<T> GetEnumerator() => Query.GetEnumerator();
 
         IEnumerator IEnumerable.GetEnumerator() => Query.GetEnumerator();
+
+        public PagedQueryable(IQueryable<T> query, int skip, int take)
+        {
+            var request = new PageRequest(skip, take);
+
+            PageRequest = request;
+            Query = query;
+        }
+
+        public PagedQueryable(IQueryable<T> query, PageRequest request)
+        {
+            PageRequest = request;
+            Query = query;
+        }
     }
 }
