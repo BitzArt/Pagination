@@ -5,15 +5,15 @@ VisualStudioVersion = 16.0.31019.35
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pagination", "Pagination\Pagination.csproj", "{6537CAC1-E5C0-4381-9C0C-9F87A6C437FE}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pagination", "Pagination", "{F35F9446-B8FB-48DF-82D7-6344A2556618}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pagination.Tests", "Pagination\Tests\Pagination.Tests.csproj", "{FF20022C-66CA-40BB-B10A-EBDBF3CE86D4}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pagination.EntityFrameworkCore", "Pagination.EntityFrameworkCore", "{90E810EF-B454-4F8D-8A51-B3F568C7F5ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pagination", "Pagination\Tests\Pagination.csproj", "{FF20022C-66CA-40BB-B10A-EBDBF3CE86D4}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pagination.EntityFrameworkCore", "Pagination.EntityFrameworkCore\Pagination.EntityFrameworkCore.csproj", "{D6BAC9B5-921D-4EE2-B0F3-FC63A92CAD18}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pagination.EntityFrameworkCore.Tests", "Pagination.EntityFrameworkCore\Tests\Pagination.EntityFrameworkCore.Tests.csproj", "{692B6F17-92B2-4487-9B77-32BD4FF3F02A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pagination.EntityFrameworkCore", "Pagination.EntityFrameworkCore\Tests\Pagination.EntityFrameworkCore.csproj", "{692B6F17-92B2-4487-9B77-32BD4FF3F02A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B71C3C33-6C55-4804-B914-F0CBF41A0673}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{039796DD-862E-4BFE-93F0-158B0AFBE750}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,10 +42,10 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{6537CAC1-E5C0-4381-9C0C-9F87A6C437FE} = {F35F9446-B8FB-48DF-82D7-6344A2556618}
-		{FF20022C-66CA-40BB-B10A-EBDBF3CE86D4} = {F35F9446-B8FB-48DF-82D7-6344A2556618}
-		{D6BAC9B5-921D-4EE2-B0F3-FC63A92CAD18} = {90E810EF-B454-4F8D-8A51-B3F568C7F5ED}
-		{692B6F17-92B2-4487-9B77-32BD4FF3F02A} = {90E810EF-B454-4F8D-8A51-B3F568C7F5ED}
+		{6537CAC1-E5C0-4381-9C0C-9F87A6C437FE} = {B71C3C33-6C55-4804-B914-F0CBF41A0673}
+		{FF20022C-66CA-40BB-B10A-EBDBF3CE86D4} = {039796DD-862E-4BFE-93F0-158B0AFBE750}
+		{D6BAC9B5-921D-4EE2-B0F3-FC63A92CAD18} = {B71C3C33-6C55-4804-B914-F0CBF41A0673}
+		{692B6F17-92B2-4487-9B77-32BD4FF3F02A} = {039796DD-862E-4BFE-93F0-158B0AFBE750}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0BEB49FD-CA85-484B-9AA8-B466D2AF7B67}
