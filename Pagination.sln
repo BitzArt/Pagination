@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31019.35
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pagination", "src\Pagination\Pagination.csproj", "{6537CAC1-E5C0-4381-9C0C-9F87A6C437FE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core", "src\Core\Core.csproj", "{6537CAC1-E5C0-4381-9C0C-9F87A6C437FE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pagination.EntityFrameworkCore", "src\Implementations\Pagination.EntityFrameworkCore\Pagination.EntityFrameworkCore.csproj", "{D6BAC9B5-921D-4EE2-B0F3-FC63A92CAD18}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityFrameworkCore", "src\Implementations\EntityFrameworkCore\EntityFrameworkCore.csproj", "{D6BAC9B5-921D-4EE2-B0F3-FC63A92CAD18}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pagination.EntityFrameworkCore.Tests", "tests\Implementations\Pagination.EntityFrameworkCore.Tests\Pagination.EntityFrameworkCore.Tests.csproj", "{692B6F17-92B2-4487-9B77-32BD4FF3F02A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityFrameworkCore", "tests\Implementations\EntityFrameworkCore\EntityFrameworkCore.csproj", "{692B6F17-92B2-4487-9B77-32BD4FF3F02A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F566E995-6EC7-49DD-A9C8-02B668365BB1}"
 EndProject
@@ -15,11 +15,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{8F48349F
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Implementations", "Implementations", "{F997308C-A49E-4E03-BDB7-AEFB12ADAE43}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pagination.EntityFramework", "src\Implementations\Pagination.EntityFramework\Pagination.EntityFramework.csproj", "{731F635D-4102-4425-B3B7-E4CA006180BB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityFramework", "src\Implementations\EntityFramework\EntityFramework.csproj", "{731F635D-4102-4425-B3B7-E4CA006180BB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Implementations", "Implementations", "{2002BBC2-008E-483E-8151-49EF0ADD7163}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pagination.Tests", "tests\Pagination.Tests\Pagination.Tests.csproj", "{0420F047-CAFE-44CA-9FB2-C10526B2B5E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared", "tests\Implementations\Shared\Shared.csproj", "{0420F047-CAFE-44CA-9FB2-C10526B2B5E1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{3AFF0CF3-4C06-4A3B-A46F-AA0455925313}"
 	ProjectSection(SolutionItems) = preProject
@@ -70,7 +70,7 @@ Global
 		{F997308C-A49E-4E03-BDB7-AEFB12ADAE43} = {F566E995-6EC7-49DD-A9C8-02B668365BB1}
 		{731F635D-4102-4425-B3B7-E4CA006180BB} = {F997308C-A49E-4E03-BDB7-AEFB12ADAE43}
 		{2002BBC2-008E-483E-8151-49EF0ADD7163} = {8F48349F-7206-4D9D-9C9C-DB408E985D3F}
-		{0420F047-CAFE-44CA-9FB2-C10526B2B5E1} = {8F48349F-7206-4D9D-9C9C-DB408E985D3F}
+		{0420F047-CAFE-44CA-9FB2-C10526B2B5E1} = {2002BBC2-008E-483E-8151-49EF0ADD7163}
 		{195F6BAF-AE19-49D7-BACC-129DBB939B2C} = {3AFF0CF3-4C06-4A3B-A46F-AA0455925313}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution

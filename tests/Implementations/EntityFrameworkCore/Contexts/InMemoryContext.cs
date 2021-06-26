@@ -1,9 +1,9 @@
 ﻿using BitzArt.Pagination.Tests.Models;
 using Microsoft.Data.Sqlite;
+using Microsoft.EntityFrameworkCore;
 using System.Data.Common;
-using System.Data.Entity;
 
-namespace BitzArt.Pagination.EntityFrameworkCore.Tests.Contexts
+namespace BitzArt.Pagination.Tests.EntityFrameworkCore.Contexts
 {
     public class InMemoryContext : DbContext
     {

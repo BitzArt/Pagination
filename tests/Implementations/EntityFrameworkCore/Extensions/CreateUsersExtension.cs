@@ -1,8 +1,8 @@
-﻿using BitzArt.Pagination.EntityFrameworkCore.Tests.Contexts;
+﻿using BitzArt.Pagination.Tests.EntityFrameworkCore.Contexts;
 using BitzArt.Pagination.Tests.Models;
 using System.Collections.Generic;
 
-namespace BitzArt.Pagination.EntityFrameworkCore.Tests.Extensions
+namespace BitzArt.Pagination.Tests.EntityFrameworkCore.Extensions
 {
     public static class CreateUsersExtension
     {
