@@ -21,9 +21,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Implementations", "Implemen
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pagination.Tests", "tests\Pagination.Tests\Pagination.Tests.csproj", "{0420F047-CAFE-44CA-9FB2-C10526B2B5E1}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{45908EED-22D7-4350-A2C9-C8B495E2C7E2}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{3AFF0CF3-4C06-4A3B-A46F-AA0455925313}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\Run Tests.yml = .github\workflows\Run Tests.yml
+	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Workflows", "Workflows", "{3AFF0CF3-4C06-4A3B-A46F-AA0455925313}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Publish", "Publish", "{195F6BAF-AE19-49D7-BACC-129DBB939B2C}"
 	ProjectSection(SolutionItems) = preProject
 		.github\workflows\Publish Pagination.EntityFramework.yml = .github\workflows\Publish Pagination.EntityFramework.yml
 		.github\workflows\Publish Pagination.EntityFrameworkCore.yml = .github\workflows\Publish Pagination.EntityFrameworkCore.yml
@@ -68,7 +71,7 @@ Global
 		{731F635D-4102-4425-B3B7-E4CA006180BB} = {F997308C-A49E-4E03-BDB7-AEFB12ADAE43}
 		{2002BBC2-008E-483E-8151-49EF0ADD7163} = {8F48349F-7206-4D9D-9C9C-DB408E985D3F}
 		{0420F047-CAFE-44CA-9FB2-C10526B2B5E1} = {8F48349F-7206-4D9D-9C9C-DB408E985D3F}
-		{3AFF0CF3-4C06-4A3B-A46F-AA0455925313} = {45908EED-22D7-4350-A2C9-C8B495E2C7E2}
+		{195F6BAF-AE19-49D7-BACC-129DBB939B2C} = {3AFF0CF3-4C06-4A3B-A46F-AA0455925313}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0BEB49FD-CA85-484B-9AA8-B466D2AF7B67}
