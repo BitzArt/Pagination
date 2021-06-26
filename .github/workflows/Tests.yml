@@ -3,7 +3,7 @@ name: Tests
 on:
   push:
     tags-ignore:
-      - '**'
+      - '*'
 
 jobs:
   tests:
