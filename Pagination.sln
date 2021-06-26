@@ -28,10 +28,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Publish", "Publish", "{195F6BAF-AE19-49D7-BACC-129DBB939B2C}"
 	ProjectSection(SolutionItems) = preProject
+		.github\workflows\Publish Core.yml = .github\workflows\Publish Core.yml
 		.github\workflows\Publish Pagination.EntityFramework.yml = .github\workflows\Publish Pagination.EntityFramework.yml
 		.github\workflows\Publish Pagination.EntityFrameworkCore.yml = .github\workflows\Publish Pagination.EntityFrameworkCore.yml
 		.github\workflows\Publish Pagination.yml = .github\workflows\Publish Pagination.yml
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "src\Core\Core.csproj", "{B9E7189F-3B83-4F79-9D4B-D7D4FBBF48A2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,6 +62,10 @@ Global
 		{0420F047-CAFE-44CA-9FB2-C10526B2B5E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0420F047-CAFE-44CA-9FB2-C10526B2B5E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0420F047-CAFE-44CA-9FB2-C10526B2B5E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9E7189F-3B83-4F79-9D4B-D7D4FBBF48A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9E7189F-3B83-4F79-9D4B-D7D4FBBF48A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9E7189F-3B83-4F79-9D4B-D7D4FBBF48A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9E7189F-3B83-4F79-9D4B-D7D4FBBF48A2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -72,6 +79,7 @@ Global
 		{2002BBC2-008E-483E-8151-49EF0ADD7163} = {8F48349F-7206-4D9D-9C9C-DB408E985D3F}
 		{0420F047-CAFE-44CA-9FB2-C10526B2B5E1} = {2002BBC2-008E-483E-8151-49EF0ADD7163}
 		{195F6BAF-AE19-49D7-BACC-129DBB939B2C} = {3AFF0CF3-4C06-4A3B-A46F-AA0455925313}
+		{B9E7189F-3B83-4F79-9D4B-D7D4FBBF48A2} = {F566E995-6EC7-49DD-A9C8-02B668365BB1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0BEB49FD-CA85-484B-9AA8-B466D2AF7B67}
