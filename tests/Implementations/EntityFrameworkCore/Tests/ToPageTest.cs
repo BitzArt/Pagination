@@ -1,5 +1,4 @@
-﻿using BitzArt.Pagination.EntityFrameworkCore;
-using BitzArt.Pagination.Models;
+﻿using BitzArt.Pagination.Models;
 using BitzArt.Pagination.Tests.EntityFrameworkCore.Contexts;
 using BitzArt.Pagination.Tests.EntityFrameworkCore.Extensions;
 using BitzArt.Pagination.Tests.Models;
