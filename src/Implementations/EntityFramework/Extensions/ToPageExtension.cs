@@ -2,8 +2,9 @@
 using System.Linq;
 using System.Threading.Tasks;
 using System.Data.Entity;
+using System;
 
-namespace System.Data.Entity
+namespace BitzArt.Pagination.EntityFramework
 {
     public static class ToPageExtension
     {

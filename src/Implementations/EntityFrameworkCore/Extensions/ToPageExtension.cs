@@ -1,9 +1,10 @@
 ﻿using BitzArt.Pagination.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Microsoft.EntityFrameworkCore
+namespace BitzArt.Pagination.EntityFrameworkCore
 {
     public static class ToPageExtension
     {
