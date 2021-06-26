@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -10,5 +10,9 @@
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/BitzArt/Pagination</RepositoryUrl>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BitzArt.Pagination.Core" Version="1.2.0" />
+  </ItemGroup>
 
 </Project>
