@@ -1,6 +1,6 @@
 # Pagination
 
-![Tests](https://github.com/BitzArt/Pagination/actions/workflows/Run Tests/badge.svg)
+![Tests](https://github.com/BitzArt/Pagination/actions/workflows/Tests.yml/badge.svg)
 
 BitzArt.Pagination nuget package
 
