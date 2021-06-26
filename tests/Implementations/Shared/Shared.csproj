@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
     <RootNamespace>BitzArt.Pagination.Tests</RootNamespace>
+    <AssemblyName>BitzArt.Pagination.Tests</AssemblyName>
   </PropertyGroup>
 
 </Project>

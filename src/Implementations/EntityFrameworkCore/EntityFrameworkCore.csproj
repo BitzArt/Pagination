@@ -8,6 +8,7 @@
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/BitzArt/Pagination</RepositoryUrl>
     <RootNamespace>BitzArt.Pagination.EntityFrameworkCore</RootNamespace>
+    <AssemblyName>BitzArt.Pagination.EntityFrameworkCore</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>

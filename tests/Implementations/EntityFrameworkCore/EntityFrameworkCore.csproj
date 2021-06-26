@@ -6,6 +6,8 @@
     <IsPackable>false</IsPackable>
 
     <RootNamespace>BitzArt.Pagination.Tests.EntityFrameworkCore</RootNamespace>
+
+    <AssemblyName>BitzArt.Pagination.Tests.EntityFrameworkCore</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>

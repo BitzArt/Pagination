@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31019.35
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core", "src\Core\Core.csproj", "{6537CAC1-E5C0-4381-9C0C-9F87A6C437FE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pagination", "src\Pagination\Pagination.csproj", "{6537CAC1-E5C0-4381-9C0C-9F87A6C437FE}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityFrameworkCore", "src\Implementations\EntityFrameworkCore\EntityFrameworkCore.csproj", "{D6BAC9B5-921D-4EE2-B0F3-FC63A92CAD18}"
 EndProject
