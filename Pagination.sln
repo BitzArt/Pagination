@@ -23,7 +23,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pagination.Tests", "tests\P
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{3AFF0CF3-4C06-4A3B-A46F-AA0455925313}"
 	ProjectSection(SolutionItems) = preProject
-		.github\workflows\Run Tests.yml = .github\workflows\Run Tests.yml
+		.github\workflows\Tests.yml = .github\workflows\Tests.yml
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Publish", "Publish", "{195F6BAF-AE19-49D7-BACC-129DBB939B2C}"
