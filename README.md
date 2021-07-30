@@ -8,11 +8,11 @@ https://www.nuget.org/packages/BitzArt.Pagination/
 
 Example of creating paged result:
 
-    var result = await dbContext.Users.ToPageAsync(request);
+    var result = await dbContext.Set<SomeEntity>().ToPageAsync(0, 10);
     
 Result will be the same as:
 
-    var data = await dbContext.Users.Skip(skip).Take(take).ToListAsync();
-    var total = dbContext.Users.Count();
-    var result = new PageResult<User>(data, request, total);
+    var data = await dbContext.Set<SomeEntity>().Skip(0).Take(10).ToListAsync();
+    var total = dbContext.Set<SomeEntity>().Count();
+    var result = new PageResult(data, request, total);
     
