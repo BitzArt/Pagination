@@ -2,9 +2,10 @@
 
 ![Tests](https://github.com/BitzArt/Pagination/actions/workflows/Tests.yml/badge.svg)
 
-https://www.nuget.org/packages/BitzArt.Pagination/
-
 Supports EF and EF Core. To use with your version of EF, add appropriate nuget package to your project.
+
+https://www.nuget.org/packages/BitzArt.Pagination.EntityFrameworkCore/
+https://www.nuget.org/packages/BitzArt.Pagination.EntityFramework/
 
 Assuming that you have a DbContext with some entity like
 
