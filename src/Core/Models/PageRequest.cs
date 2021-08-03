@@ -2,8 +2,8 @@
 {
     public class PageRequest
     {
-        public int Skip { get; set; }
-        public int Take { get; set; }
+        public virtual int Skip { get; set; }
+        public virtual int Take { get; set; }
 
         public PageRequest(int skip = 0, int take = 100)
         {
