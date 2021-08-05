@@ -12,7 +12,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="BitzArt.Pagination.Core" Version="1.2.0" />
+    <PackageReference Include="BitzArt.Pagination.Core" Version="1.2.4" />
   </ItemGroup>
 
 </Project>

@@ -19,7 +19,7 @@ namespace BitzArt.Pagination.Tests.EntityFrameworkCore.Tests
         [InlineData(10, 10)]
         public async Task ToPage(int skip, int take)
         {
-            var context = InMemoryContext.Instance;
+            var context = InMemoryContext.Instance; //TODO: Optimize this
             context.CreateUsers(skip + take); //TODO: Optimize this
 
             var request = new PageRequest(skip, take);
