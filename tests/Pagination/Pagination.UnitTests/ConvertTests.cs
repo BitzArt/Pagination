@@ -11,15 +11,19 @@ namespace BitzArt.Pagination.Tests
         [Fact]
         public void ToPage_CorrectSource_CorrectResult()
         {
-            var data = new List<TestSourceClass>();
-            for (int i = 1; i <= 10; i++) data.Add(new TestSourceClass($"test object {i}"));
+            var sourceData = new List<TestSourceClass>();
+            for (int i = 1; i <= 10; i++) sourceData.Add(new TestSourceClass($"test object {i}"));
 
-            var source = new PageResult<TestSourceClass>(data, null, 10);
-            var converted = source.Convert(x => new TestResultClass(x));
+            var sourcePage = new PageResult<TestSourceClass>(sourceData, null, 10);
+            var resultPage = sourcePage.Convert(x => new TestResultClass(x));
 
             for (int i = 1; i <= 10; i++)
             {
-                Assert.Equal(source.Data.ElementAt(i - 1), converted.Data.ElementAt(i - 1).Source);
+                var source = sourcePage.Data.ElementAt(i - 1);
+                var result = resultPage.Data.ElementAt(i - 1).Source;
+
+                Assert.Equal(source, result);
+                Assert.Equal(source.Name, result.Name);
             }
         }
     }
