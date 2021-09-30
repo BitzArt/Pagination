@@ -2,6 +2,16 @@
 
 ![Tests](https://github.com/BitzArt/Pagination/actions/workflows/Tests.yml/badge.svg)
 
+# Use with IEnumerable
+
+You can use this library on IEnumerable interface. Just add this nuget package
+
+https://www.nuget.org/packages/BitzArt.Pagination
+
+Call .ToPage() method on an enumerable to get a PageResult.
+
+# Use with Entity Framework
+
 Supports EF and EF Core. To use with your version of EF, add appropriate nuget package to your project.
 
 https://www.nuget.org/packages/BitzArt.Pagination.EntityFrameworkCore/
