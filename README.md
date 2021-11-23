@@ -25,10 +25,6 @@ Example of creating paged result:
 
     var result = await dbContext.Items.ToPageAsync(0, 10);
     
-Or (obviously):
-
-    var result = await dbContext.Set<SomeEntity>().ToPageAsync(0, 10);
-    
 Result will be the same as:
 
     var data = await dbContext.Items.Skip(0).Take(10).ToListAsync();
