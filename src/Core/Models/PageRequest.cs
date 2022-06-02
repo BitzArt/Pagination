@@ -2,13 +2,13 @@
 {
     public class PageRequest
     {
-        public virtual int Skip { get; set; }
-        public virtual int Take { get; set; }
+        public virtual int Offset { get; set; }
+        public virtual int Limit { get; set; }
 
-        public PageRequest(int skip = 0, int take = 100)
+        public PageRequest(int offset = 0, int limit = 100)
         {
-            Skip = skip;
-            Take = take;
+            Offset = offset;
+            Limit = limit;
         }
     }
 }
