@@ -14,7 +14,7 @@ namespace System.Data.Entity
 
         public static async Task<PageResult<T>> ToPageAsync<T>(this IQueryable<T> query, PageRequest request)
         {
-            var data = await query.Skip(request.Skip).Take(request.Take).ToListAsync();
+            var data = await query.Skip(request.Offset).Take(request.Limit).ToListAsync();
             var total = await query.CountAsync();
 
             return new PageResult<T>(data, request, total);
