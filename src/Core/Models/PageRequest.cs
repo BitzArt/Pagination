@@ -1,15 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 
 namespace BitzArt.Pagination.Models
 {
     public class PageRequest
     {
-        [FromQuery(Name = "offset")]
         [JsonProperty("offset")]
         public virtual int Offset { get; set; }
 
-        [FromQuery(Name = "limit")]
         [JsonProperty("limit")]
         public virtual int Limit { get; set; }
 
