@@ -30,8 +30,8 @@ jobs:
 
       - name: Build
         run: |
-          dotnet build src/Implementations/BitzArt.Pagination.EntityFrameworkCore/BitzArt.Pagination.EntityFrameworkCore.csproj --configuration Release /p:Version=${VERSION}
-          dotnet pack src/Implementations/BitzArt.Pagination.EntityFrameworkCore/BitzArt.Pagination.EntityFrameworkCore.csproj --configuration Release /p:Version=${VERSION} --no-build --output .
+          dotnet build src/Implementations/BitzArt.Pagination.Implementations.EntityFrameworkCore/BitzArt.Pagination.Implementations.EntityFrameworkCore.csproj --configuration Release /p:Version=${VERSION}
+          dotnet pack src/Implementations/BitzArt.Pagination.Implementations.EntityFrameworkCore/BitzArt.Pagination.Implementations.EntityFrameworkCore.csproj --configuration Release /p:Version=${VERSION} --no-build --output .
 
       - name: Push
         run: dotnet nuget push BitzArt.Pagination.EntityFrameworkCore.${VERSION}.nupkg --source https://api.nuget.org/v3/index.json --api-key ${NUGET_APIKEY}

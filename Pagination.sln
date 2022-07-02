@@ -28,7 +28,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{45593F25-49AA-4456-AF85-10200C03E47D}"
 	ProjectSection(SolutionItems) = preProject
 		.github\workflows\Publish Core.yml = .github\workflows\Publish Core.yml
-		.github\workflows\Publish Pagination.EntityFramework.yml = .github\workflows\Publish Pagination.EntityFramework.yml
 		.github\workflows\Publish Pagination.EntityFrameworkCore.yml = .github\workflows\Publish Pagination.EntityFrameworkCore.yml
 		.github\workflows\Publish Pagination.yml = .github\workflows\Publish Pagination.yml
 		.github\workflows\Tests.yml = .github\workflows\Tests.yml
