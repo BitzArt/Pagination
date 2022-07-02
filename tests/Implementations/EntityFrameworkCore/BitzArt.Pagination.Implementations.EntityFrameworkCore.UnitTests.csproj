@@ -7,7 +7,7 @@
 
     <RootNamespace>BitzArt.Pagination.Tests.EntityFrameworkCore</RootNamespace>
 
-    <AssemblyName>BitzArt.Pagination.Tests.EntityFrameworkCore</AssemblyName>
+    <AssemblyName>BitzArt.Pagination.Implementations.EntityFrameworkCore.UnitTests</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
@@ -25,8 +25,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\src\Implementations\EntityFrameworkCore\EntityFrameworkCore.csproj" />
-    <ProjectReference Include="..\Shared\Shared.csproj" />
+    <ProjectReference Include="..\..\..\src\Implementations\EntityFrameworkCore\BitzArt.Pagination.Implementations.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\Shared\BitzArt.Pagination.Implementations.Shared.csproj" />
   </ItemGroup>
 
 </Project>

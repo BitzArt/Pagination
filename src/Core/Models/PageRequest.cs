@@ -10,9 +10,7 @@ namespace BitzArt.Pagination.Models
         [JsonProperty("limit")]
         public virtual int Limit { get; set; }
 
-        public PageRequest() : this(0, 100)
-        {
-        }
+        public PageRequest() : this(0, 100) { }
 
         public PageRequest(int offset, int limit)
         {
