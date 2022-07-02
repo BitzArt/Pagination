@@ -6,10 +6,10 @@ namespace Microsoft.EntityFrameworkCore
 {
     public static class ToPageAsyncExtension
     {
-        public static async Task<PageResult<T>> ToPageAsync<T>(this IQueryable<T> query, int skip, int take)
+        public static Task<PageResult<T>> ToPageAsync<T>(this IQueryable<T> query, int skip, int take)
         {
             var request = new PageRequest(skip, take);
-            return await query.ToPageAsync(request);
+            return query.ToPageAsync(request);
         }
 
         public static async Task<PageResult<T>> ToPageAsync<T>(this IQueryable<T> query, PageRequest request)
