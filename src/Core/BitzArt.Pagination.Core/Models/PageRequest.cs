@@ -10,6 +10,7 @@ namespace BitzArt.Pagination
         [JsonProperty("limit")]
         public virtual int Limit { get; set; }
 
+        /// <summary> Will create a page request with default values for offset (0) and limit (100) </summary>
         public PageRequest() : this(0, 100) { }
 
         public PageRequest(int offset, int limit)
