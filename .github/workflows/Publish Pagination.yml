@@ -30,9 +30,8 @@ jobs:
 
       - name: Build
         run: |
-          dotnet build src/Pagination/Pagination.csproj --configuration Release /p:Version=${VERSION}
-          dotnet test src/Pagination/Pagination.csproj --configuration Release /p:Version=${VERSION} --no-build
-          dotnet pack src/Pagination/Pagination.csproj --configuration Release /p:Version=${VERSION} --no-build --output .
+          dotnet build src/BitzArt.Pagination/BitzArt.Pagination.csproj --configuration Release /p:Version=${VERSION}
+          dotnet pack src/BitzArt.Pagination/BitzArt.Pagination.csproj --configuration Release /p:Version=${VERSION} --no-build --output .
 
       - name: Push
         run: dotnet nuget push BitzArt.Pagination.${VERSION}.nupkg --source https://api.nuget.org/v3/index.json --api-key ${NUGET_APIKEY}

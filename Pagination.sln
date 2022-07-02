@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31019.35
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32516.85
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pagination", "src\Pagination\Pagination.csproj", "{6537CAC1-E5C0-4381-9C0C-9F87A6C437FE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitzArt.Pagination", "src\BitzArt.Pagination\BitzArt.Pagination.csproj", "{6537CAC1-E5C0-4381-9C0C-9F87A6C437FE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityFrameworkCore", "src\Implementations\EntityFrameworkCore\EntityFrameworkCore.csproj", "{D6BAC9B5-921D-4EE2-B0F3-FC63A92CAD18}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitzArt.Pagination.Implementations.EntityFrameworkCore", "src\Implementations\BitzArt.Pagination.Implementations.EntityFrameworkCore\BitzArt.Pagination.Implementations.EntityFrameworkCore.csproj", "{D6BAC9B5-921D-4EE2-B0F3-FC63A92CAD18}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityFrameworkCore", "tests\Implementations\EntityFrameworkCore\EntityFrameworkCore.csproj", "{692B6F17-92B2-4487-9B77-32BD4FF3F02A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitzArt.Pagination.Implementations.EntityFrameworkCore.UnitTests", "tests\Implementations\BitzArt.Pagination.Implementations.EntityFrameworkCore\BitzArt.Pagination.Implementations.EntityFrameworkCore.UnitTests.csproj", "{692B6F17-92B2-4487-9B77-32BD4FF3F02A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F566E995-6EC7-49DD-A9C8-02B668365BB1}"
 EndProject
@@ -15,30 +15,32 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{8F48349F
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Implementations", "Implementations", "{F997308C-A49E-4E03-BDB7-AEFB12ADAE43}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityFramework", "src\Implementations\EntityFramework\EntityFramework.csproj", "{731F635D-4102-4425-B3B7-E4CA006180BB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitzArt.Pagination.Implementations.EntityFramework", "src\Implementations\BitzArt.Pagination.Implementations.EntityFramework\BitzArt.Pagination.Implementations.EntityFramework.csproj", "{731F635D-4102-4425-B3B7-E4CA006180BB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Implementations", "Implementations", "{2002BBC2-008E-483E-8151-49EF0ADD7163}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared", "tests\Implementations\Shared\Shared.csproj", "{0420F047-CAFE-44CA-9FB2-C10526B2B5E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitzArt.Pagination.Implementations.Tests.Shared", "tests\Implementations\BitzArt.Pagination.Implementations.Tests.Shared\BitzArt.Pagination.Implementations.Tests.Shared.csproj", "{0420F047-CAFE-44CA-9FB2-C10526B2B5E1}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{3AFF0CF3-4C06-4A3B-A46F-AA0455925313}"
-	ProjectSection(SolutionItems) = preProject
-		.github\workflows\Tests.yml = .github\workflows\Tests.yml
-	EndProjectSection
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitzArt.Pagination.Core", "src\Core\BitzArt.Pagination.Core\BitzArt.Pagination.Core.csproj", "{B9E7189F-3B83-4F79-9D4B-D7D4FBBF48A2}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Publish", "Publish", "{195F6BAF-AE19-49D7-BACC-129DBB939B2C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitzArt.Pagination.UnitTests", "tests\BitzArt.Pagination.UnitTests\BitzArt.Pagination.UnitTests.csproj", "{34120CEF-882C-4992-AF60-C4BEEF63D44D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{9EE66006-E250-4471-9C0A-420A21A1AAD9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{45593F25-49AA-4456-AF85-10200C03E47D}"
 	ProjectSection(SolutionItems) = preProject
 		.github\workflows\Publish Core.yml = .github\workflows\Publish Core.yml
 		.github\workflows\Publish Pagination.EntityFramework.yml = .github\workflows\Publish Pagination.EntityFramework.yml
 		.github\workflows\Publish Pagination.EntityFrameworkCore.yml = .github\workflows\Publish Pagination.EntityFrameworkCore.yml
 		.github\workflows\Publish Pagination.yml = .github\workflows\Publish Pagination.yml
+		.github\workflows\Tests.yml = .github\workflows\Tests.yml
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core", "src\Core\Core.csproj", "{B9E7189F-3B83-4F79-9D4B-D7D4FBBF48A2}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{65AF661B-3598-483F-B5AB-7E3F4D4AA425}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pagination", "Pagination", "{AAB86872-114D-40EF-AAEB-6241C531B98B}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{408A2147-8909-4F4B-A3BA-C4BAB88B632A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pagination.UnitTests", "tests\Pagination\Pagination.UnitTests\Pagination.UnitTests.csproj", "{34120CEF-882C-4992-AF60-C4BEEF63D44D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitzArt.Pagination.Core.UnitTests", "tests\Core\BitzArt.Pagination.Core.UnitTests\BitzArt.Pagination.Core.UnitTests.csproj", "{72D8E36D-D55E-4CE1-BC45-5FBE3C16125A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -74,6 +76,10 @@ Global
 		{34120CEF-882C-4992-AF60-C4BEEF63D44D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{34120CEF-882C-4992-AF60-C4BEEF63D44D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{34120CEF-882C-4992-AF60-C4BEEF63D44D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72D8E36D-D55E-4CE1-BC45-5FBE3C16125A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72D8E36D-D55E-4CE1-BC45-5FBE3C16125A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72D8E36D-D55E-4CE1-BC45-5FBE3C16125A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72D8E36D-D55E-4CE1-BC45-5FBE3C16125A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -86,10 +92,12 @@ Global
 		{731F635D-4102-4425-B3B7-E4CA006180BB} = {F997308C-A49E-4E03-BDB7-AEFB12ADAE43}
 		{2002BBC2-008E-483E-8151-49EF0ADD7163} = {8F48349F-7206-4D9D-9C9C-DB408E985D3F}
 		{0420F047-CAFE-44CA-9FB2-C10526B2B5E1} = {2002BBC2-008E-483E-8151-49EF0ADD7163}
-		{195F6BAF-AE19-49D7-BACC-129DBB939B2C} = {3AFF0CF3-4C06-4A3B-A46F-AA0455925313}
-		{B9E7189F-3B83-4F79-9D4B-D7D4FBBF48A2} = {F566E995-6EC7-49DD-A9C8-02B668365BB1}
-		{AAB86872-114D-40EF-AAEB-6241C531B98B} = {8F48349F-7206-4D9D-9C9C-DB408E985D3F}
-		{34120CEF-882C-4992-AF60-C4BEEF63D44D} = {AAB86872-114D-40EF-AAEB-6241C531B98B}
+		{B9E7189F-3B83-4F79-9D4B-D7D4FBBF48A2} = {65AF661B-3598-483F-B5AB-7E3F4D4AA425}
+		{34120CEF-882C-4992-AF60-C4BEEF63D44D} = {8F48349F-7206-4D9D-9C9C-DB408E985D3F}
+		{45593F25-49AA-4456-AF85-10200C03E47D} = {9EE66006-E250-4471-9C0A-420A21A1AAD9}
+		{65AF661B-3598-483F-B5AB-7E3F4D4AA425} = {F566E995-6EC7-49DD-A9C8-02B668365BB1}
+		{408A2147-8909-4F4B-A3BA-C4BAB88B632A} = {8F48349F-7206-4D9D-9C9C-DB408E985D3F}
+		{72D8E36D-D55E-4CE1-BC45-5FBE3C16125A} = {408A2147-8909-4F4B-A3BA-C4BAB88B632A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0BEB49FD-CA85-484B-9AA8-B466D2AF7B67}

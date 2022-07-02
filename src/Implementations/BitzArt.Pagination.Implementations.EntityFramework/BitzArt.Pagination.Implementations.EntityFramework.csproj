@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+
+    <PackageId>BitzArt.Pagination.EntityFramework</PackageId>
+    <Authors>BitzArt</Authors>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/BitzArt/Pagination</RepositoryUrl>
+    <RootNamespace>BitzArt.Pagination.EntityFramework</RootNamespace>
+    <AssemblyName>BitzArt.Pagination.Implementations.EntityFramework</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BitzArt.Pagination" Version="1.4.1" />
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
+  </ItemGroup>
+  
+</Project>
