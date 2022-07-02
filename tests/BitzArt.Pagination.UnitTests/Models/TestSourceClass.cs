@@ -1,4 +1,4 @@
-﻿namespace BitzArt.Pagination.Tests
+﻿namespace BitzArt.Pagination.Models
 {
     public class TestSourceClass
     {

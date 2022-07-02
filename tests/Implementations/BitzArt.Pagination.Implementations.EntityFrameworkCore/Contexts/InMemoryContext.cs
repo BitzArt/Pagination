@@ -1,8 +1,9 @@
-﻿using Microsoft.Data.Sqlite;
+﻿using BitzArt.Pagination.Models;
+using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 using System.Data.Common;
 
-namespace BitzArt.Pagination.Implementations.EntityFrameworkCore.Contexts
+namespace BitzArt.Pagination.EntityFrameworkCore
 {
     public class InMemoryContext : DbContext
     {

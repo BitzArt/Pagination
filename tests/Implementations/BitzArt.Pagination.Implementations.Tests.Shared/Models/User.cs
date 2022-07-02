@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace BitzArt.Pagination.Implementations
+namespace BitzArt.Pagination.Models
 {
     [Table("users")]
     public class User

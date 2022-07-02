@@ -1,7 +1,7 @@
-﻿using BitzArt.Pagination.Implementations.EntityFrameworkCore.Contexts;
+﻿using BitzArt.Pagination.Models;
 using System.Collections.Generic;
 
-namespace BitzArt.Pagination.Implementations.EntityFrameworkCore
+namespace BitzArt.Pagination.EntityFrameworkCore
 {
     public static class CreateUsersExtension
     {
