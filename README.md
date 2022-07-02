@@ -10,12 +10,10 @@ https://www.nuget.org/packages/BitzArt.Pagination
 
 Call .ToPage() method on an enumerable to get a PageResult.
 
-# Use with Entity Framework
+# Use with EF Core
 
-Supports EF and EF Core. To use with your version of EF, add appropriate nuget package to your project.
-
+Add a nuget package to your project:
 https://www.nuget.org/packages/BitzArt.Pagination.EntityFrameworkCore/
-https://www.nuget.org/packages/BitzArt.Pagination.EntityFramework/
 
 Assuming that you have a DbContext with some entity like
 
@@ -24,9 +22,3 @@ Assuming that you have a DbContext with some entity like
 Example of creating paged result:
 
     var result = await dbContext.Items.ToPageAsync(0, 10);
-    
-Result will be the same as:
-
-    var data = await dbContext.Items.Skip(0).Take(10).ToListAsync();
-    var total = dbContext.Items.Count();
-    var result = new PageResult(data, request, total);
