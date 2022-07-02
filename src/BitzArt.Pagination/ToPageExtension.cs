@@ -6,10 +6,7 @@ namespace System.Linq
     public static class ToPageExtension
     {
         public static PageResult<T> ToPage<T>(this IEnumerable<T> query, int skip, int take)
-        {
-            var request = new PageRequest(skip, take);
-            return query.ToPage(request);
-        }
+            => query.ToPage(new PageRequest(skip, take));
 
         public static PageResult<T> ToPage<T>(this IEnumerable<T> query, PageRequest request)
         {

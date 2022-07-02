@@ -19,7 +19,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitzArt.Pagination.Implemen
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Implementations", "Implementations", "{2002BBC2-008E-483E-8151-49EF0ADD7163}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitzArt.Pagination.Implementations.Shared", "tests\Implementations\BitzArt.Pagination.Implementations.Shared\BitzArt.Pagination.Implementations.Shared.csproj", "{0420F047-CAFE-44CA-9FB2-C10526B2B5E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitzArt.Pagination.Implementations.Tests.Shared", "tests\Implementations\BitzArt.Pagination.Implementations.Tests.Shared\BitzArt.Pagination.Implementations.Tests.Shared.csproj", "{0420F047-CAFE-44CA-9FB2-C10526B2B5E1}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitzArt.Pagination.Core", "src\Core\BitzArt.Pagination.Core\BitzArt.Pagination.Core.csproj", "{B9E7189F-3B83-4F79-9D4B-D7D4FBBF48A2}"
 EndProject
@@ -40,7 +40,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{65AF661B-3
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{408A2147-8909-4F4B-A3BA-C4BAB88B632A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitzArt.Pagination.Core.UnitTests", "tests\Core\BitzArt.Pagination.Core.UnitTests\BitzArt.Pagination.Core.UnitTests.csproj", "{72D8E36D-D55E-4CE1-BC45-5FBE3C16125A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitzArt.Pagination.Core.UnitTests", "tests\Core\BitzArt.Pagination.Core.UnitTests\BitzArt.Pagination.Core.UnitTests.csproj", "{72D8E36D-D55E-4CE1-BC45-5FBE3C16125A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,14 +1,12 @@
-﻿using BitzArt.Pagination.Models;
-using BitzArt.Pagination.Tests.EntityFrameworkCore.Contexts;
-using BitzArt.Pagination.Tests.EntityFrameworkCore.Extensions;
-using BitzArt.Pagination.Tests.Models;
+﻿using BitzArt.Pagination.Implementations.EntityFrameworkCore.Contexts;
+using BitzArt.Pagination.Models;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace BitzArt.Pagination.Tests.EntityFrameworkCore.Tests
+namespace BitzArt.Pagination.Implementations.EntityFrameworkCore.Tests
 {
     public class ToPageTest
     {

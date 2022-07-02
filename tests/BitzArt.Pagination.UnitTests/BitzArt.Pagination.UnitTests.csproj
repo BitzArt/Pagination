@@ -24,7 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\src\Pagination\BitzArt.Pagination.csproj" />
+    <ProjectReference Include="..\..\src\BitzArt.Pagination\BitzArt.Pagination.csproj" />
   </ItemGroup>
 
 </Project>

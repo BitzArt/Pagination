@@ -6,11 +6,8 @@ namespace System.Data.Entity
 {
     public static class ToPageAsyncExtension
     {
-        public static async Task<PageResult<T>> ToPageAsync<T>(this IQueryable<T> query, int skip, int take)
-        {
-            var request = new PageRequest(skip, take);
-            return await query.ToPageAsync(request);
-        }
+        public static Task<PageResult<T>> ToPageAsync<T>(this IQueryable<T> query, int skip, int take)
+            => query.ToPageAsync(new PageRequest(skip, take));
 
         public static async Task<PageResult<T>> ToPageAsync<T>(this IQueryable<T> query, PageRequest request)
         {

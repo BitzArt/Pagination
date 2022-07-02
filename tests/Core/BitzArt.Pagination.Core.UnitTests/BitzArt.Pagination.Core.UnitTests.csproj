@@ -23,4 +23,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\src\Core\BitzArt.Pagination.Core\BitzArt.Pagination.Core.csproj" />
+  </ItemGroup>
+
 </Project>
