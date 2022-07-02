@@ -1,4 +1,4 @@
-﻿using BitzArt.Pagination.Models;
+﻿using BitzArt.Pagination;
 using System.Collections.Generic;
 
 namespace System.Linq
