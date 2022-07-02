@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace BitzArt.Pagination.Models
+namespace BitzArt.Pagination
 {
     public class PageRequest
     {
