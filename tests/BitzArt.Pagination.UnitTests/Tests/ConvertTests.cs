@@ -8,22 +8,45 @@ namespace BitzArt.Pagination.Tests
 {
     public class ConvertTests
     {
-        [Fact]
-        public void ToPage_CorrectSource_CorrectResult()
+        [Theory]
+        [InlineData(10)]
+        public void ToPage_CorrectSource_CorrectResult(int count)
         {
             var sourceData = new List<TestSourceClass>();
-            for (int i = 1; i <= 10; i++) sourceData.Add(new TestSourceClass($"test object {i}"));
+            for (int i = 0; i < count; i++) sourceData.Add(new TestSourceClass($"test object {i + 1}"));
 
-            var sourcePage = new PageResult<TestSourceClass>(sourceData, null, 10);
-            var resultPage = sourcePage.Convert(x => new TestResultClass(x));
+            var sourcePage = sourceData.ToPage(0, count);
+            var resultPage = sourcePage.Convert(x => x.ToResult());
 
-            for (int i = 1; i <= 10; i++)
+            for (int i = 0; i < count; i++)
             {
-                var source = sourcePage.Data.ElementAt(i - 1);
-                var result = resultPage.Data.ElementAt(i - 1).Source;
+                var source = sourcePage.Data.ElementAt(i);
+                var result = resultPage.Data.ElementAt(i);
 
-                Assert.Equal(source, result);
-                Assert.Equal(source.Name, result.Name);
+                Assert.Equal(source, result.Source);
+                Assert.Equal(source.Name, result.Source.Name);
+            }
+        }
+
+        private class TestSourceClass
+        {
+            public string Name { get; set; }
+
+            public TestSourceClass(string name)
+            {
+                Name = name;
+            }
+
+            public TestResultClass ToResult() => new(this);
+        }
+
+        private class TestResultClass
+        {
+            public TestSourceClass Source;
+
+            public TestResultClass(TestSourceClass source)
+            {
+                Source = source;
             }
         }
     }

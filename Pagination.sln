@@ -5,39 +5,28 @@ VisualStudioVersion = 17.2.32516.85
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitzArt.Pagination", "src\BitzArt.Pagination\BitzArt.Pagination.csproj", "{6537CAC1-E5C0-4381-9C0C-9F87A6C437FE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitzArt.Pagination.Implementations.EntityFrameworkCore", "src\Implementations\BitzArt.Pagination.Implementations.EntityFrameworkCore\BitzArt.Pagination.Implementations.EntityFrameworkCore.csproj", "{D6BAC9B5-921D-4EE2-B0F3-FC63A92CAD18}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitzArt.Pagination.EntityFrameworkCore", "src\Implementations\BitzArt.Pagination.EntityFrameworkCore\BitzArt.Pagination.EntityFrameworkCore.csproj", "{D6BAC9B5-921D-4EE2-B0F3-FC63A92CAD18}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitzArt.Pagination.Implementations.EntityFrameworkCore.UnitTests", "tests\Implementations\BitzArt.Pagination.Implementations.EntityFrameworkCore\BitzArt.Pagination.Implementations.EntityFrameworkCore.UnitTests.csproj", "{692B6F17-92B2-4487-9B77-32BD4FF3F02A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitzArt.Pagination.EntityFrameworkCore.Tests", "tests\Implementations\BitzArt.Pagination.EntityFrameworkCore\BitzArt.Pagination.EntityFrameworkCore.Tests.csproj", "{692B6F17-92B2-4487-9B77-32BD4FF3F02A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F566E995-6EC7-49DD-A9C8-02B668365BB1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{8F48349F-7206-4D9D-9C9C-DB408E985D3F}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Implementations", "Implementations", "{F997308C-A49E-4E03-BDB7-AEFB12ADAE43}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Implementations", "Implementations", "{2002BBC2-008E-483E-8151-49EF0ADD7163}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitzArt.Pagination.Implementations.Tests.Shared", "tests\Implementations\BitzArt.Pagination.Implementations.Tests.Shared\BitzArt.Pagination.Implementations.Tests.Shared.csproj", "{0420F047-CAFE-44CA-9FB2-C10526B2B5E1}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitzArt.Pagination.Core", "src\Core\BitzArt.Pagination.Core\BitzArt.Pagination.Core.csproj", "{B9E7189F-3B83-4F79-9D4B-D7D4FBBF48A2}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitzArt.Pagination.UnitTests", "tests\BitzArt.Pagination.UnitTests\BitzArt.Pagination.UnitTests.csproj", "{34120CEF-882C-4992-AF60-C4BEEF63D44D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitzArt.Pagination.Tests", "tests\BitzArt.Pagination.UnitTests\BitzArt.Pagination.Tests.csproj", "{34120CEF-882C-4992-AF60-C4BEEF63D44D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{9EE66006-E250-4471-9C0A-420A21A1AAD9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{45593F25-49AA-4456-AF85-10200C03E47D}"
 	ProjectSection(SolutionItems) = preProject
-		.github\workflows\Publish Core.yml = .github\workflows\Publish Core.yml
 		.github\workflows\Publish Pagination.EntityFrameworkCore.yml = .github\workflows\Publish Pagination.EntityFrameworkCore.yml
 		.github\workflows\Publish Pagination.yml = .github\workflows\Publish Pagination.yml
 		.github\workflows\Tests.yml = .github\workflows\Tests.yml
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{65AF661B-3598-483F-B5AB-7E3F4D4AA425}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Implementations", "Implementations", "{BB9C069F-9207-4DB4-861D-FFD20100BC88}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{408A2147-8909-4F4B-A3BA-C4BAB88B632A}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitzArt.Pagination.Core.UnitTests", "tests\Core\BitzArt.Pagination.Core.UnitTests\BitzArt.Pagination.Core.UnitTests.csproj", "{72D8E36D-D55E-4CE1-BC45-5FBE3C16125A}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Implementations", "Implementations", "{9C9E98FE-15C9-4010-8077-457945BA68A7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,39 +46,22 @@ Global
 		{692B6F17-92B2-4487-9B77-32BD4FF3F02A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{692B6F17-92B2-4487-9B77-32BD4FF3F02A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{692B6F17-92B2-4487-9B77-32BD4FF3F02A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0420F047-CAFE-44CA-9FB2-C10526B2B5E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0420F047-CAFE-44CA-9FB2-C10526B2B5E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0420F047-CAFE-44CA-9FB2-C10526B2B5E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0420F047-CAFE-44CA-9FB2-C10526B2B5E1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B9E7189F-3B83-4F79-9D4B-D7D4FBBF48A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B9E7189F-3B83-4F79-9D4B-D7D4FBBF48A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B9E7189F-3B83-4F79-9D4B-D7D4FBBF48A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B9E7189F-3B83-4F79-9D4B-D7D4FBBF48A2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{34120CEF-882C-4992-AF60-C4BEEF63D44D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{34120CEF-882C-4992-AF60-C4BEEF63D44D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{34120CEF-882C-4992-AF60-C4BEEF63D44D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{34120CEF-882C-4992-AF60-C4BEEF63D44D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{72D8E36D-D55E-4CE1-BC45-5FBE3C16125A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{72D8E36D-D55E-4CE1-BC45-5FBE3C16125A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{72D8E36D-D55E-4CE1-BC45-5FBE3C16125A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{72D8E36D-D55E-4CE1-BC45-5FBE3C16125A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{6537CAC1-E5C0-4381-9C0C-9F87A6C437FE} = {F566E995-6EC7-49DD-A9C8-02B668365BB1}
-		{D6BAC9B5-921D-4EE2-B0F3-FC63A92CAD18} = {F997308C-A49E-4E03-BDB7-AEFB12ADAE43}
-		{692B6F17-92B2-4487-9B77-32BD4FF3F02A} = {2002BBC2-008E-483E-8151-49EF0ADD7163}
-		{F997308C-A49E-4E03-BDB7-AEFB12ADAE43} = {F566E995-6EC7-49DD-A9C8-02B668365BB1}
-		{2002BBC2-008E-483E-8151-49EF0ADD7163} = {8F48349F-7206-4D9D-9C9C-DB408E985D3F}
-		{0420F047-CAFE-44CA-9FB2-C10526B2B5E1} = {2002BBC2-008E-483E-8151-49EF0ADD7163}
-		{B9E7189F-3B83-4F79-9D4B-D7D4FBBF48A2} = {65AF661B-3598-483F-B5AB-7E3F4D4AA425}
+		{D6BAC9B5-921D-4EE2-B0F3-FC63A92CAD18} = {BB9C069F-9207-4DB4-861D-FFD20100BC88}
+		{692B6F17-92B2-4487-9B77-32BD4FF3F02A} = {9C9E98FE-15C9-4010-8077-457945BA68A7}
 		{34120CEF-882C-4992-AF60-C4BEEF63D44D} = {8F48349F-7206-4D9D-9C9C-DB408E985D3F}
 		{45593F25-49AA-4456-AF85-10200C03E47D} = {9EE66006-E250-4471-9C0A-420A21A1AAD9}
-		{65AF661B-3598-483F-B5AB-7E3F4D4AA425} = {F566E995-6EC7-49DD-A9C8-02B668365BB1}
-		{408A2147-8909-4F4B-A3BA-C4BAB88B632A} = {8F48349F-7206-4D9D-9C9C-DB408E985D3F}
-		{72D8E36D-D55E-4CE1-BC45-5FBE3C16125A} = {408A2147-8909-4F4B-A3BA-C4BAB88B632A}
+		{BB9C069F-9207-4DB4-861D-FFD20100BC88} = {F566E995-6EC7-49DD-A9C8-02B668365BB1}
+		{9C9E98FE-15C9-4010-8077-457945BA68A7} = {8F48349F-7206-4D9D-9C9C-DB408E985D3F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0BEB49FD-CA85-484B-9AA8-B466D2AF7B67}
