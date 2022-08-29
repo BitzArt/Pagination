@@ -12,7 +12,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="BitzArt.Pagination" Version="1.7.0" />
+    <PackageReference Include="BitzArt.Pagination" Version="1.9.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.0" />
   </ItemGroup>
 
