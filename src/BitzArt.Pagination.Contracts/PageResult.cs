@@ -2,6 +2,24 @@
 
 namespace BitzArt.Pagination
 {
+    public class PageResult<T> : PageResult
+    {
+        [JsonPropertyName("data")]
+        public new IEnumerable<T> Data
+        {
+            get => base.Data.Cast<T>();
+            set => base.Data = value.Cast<object>();
+        }
+
+        public PageResult() { }
+
+        public PageResult(IEnumerable<T> data, int offset, int limit, int total)
+            : this(data, new PageRequest(offset, limit), total) { }
+
+        public PageResult(IEnumerable<T> data, PageRequest request, int total)
+            : base(data.Cast<object>(), request, total) { }
+    }
+
     public class PageResult
     {
         [JsonPropertyName("request")]
@@ -14,7 +32,7 @@ namespace BitzArt.Pagination
         public int Total { get; set; }
 
         [JsonPropertyName("data")]
-        public virtual IEnumerable<object> Data { get; set; }
+        public IEnumerable<object> Data { get; set; }
 
         private protected PageResult() { }
 
@@ -27,28 +45,6 @@ namespace BitzArt.Pagination
             Count = Data.Count();
             Request = request;
             Total = total;
-        }
-    }
-
-    public class PageResult<T> : PageResult
-    {
-        [JsonPropertyName("data")]
-        public new IEnumerable<T> Data { get; set; }
-
-        private protected PageResult() : base() { }
-
-        public PageResult(IEnumerable<T> data, int offset, int limit, int total) : this(data, new PageRequest(offset, limit), total) { }
-
-        public PageResult(IEnumerable<T> data, PageRequest request, int total) : base(data.Cast<object>(), request, total) { }
-
-        /// <summary>
-        /// Converts the Data of a PageResult into something else using a selector
-        /// </summary>
-        /// <returns>A converted PageResult</returns>
-        public PageResult<TResult> Convert<TResult>(Func<T, TResult> selector)
-        {
-            var data = Data.Select(selector);
-            return new PageResult<TResult>(data, Request, Total);
         }
     }
 }
