@@ -28,6 +28,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Implementations", "Implemen
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Implementations", "Implementations", "{9C9E98FE-15C9-4010-8077-457945BA68A7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitzArt.Pagination.Contracts", "src\BitzArt.Pagination.Contracts\BitzArt.Pagination.Contracts.csproj", "{CA17EC1F-66FA-4C04-893F-FAEC96EDF806}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,6 +52,10 @@ Global
 		{34120CEF-882C-4992-AF60-C4BEEF63D44D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{34120CEF-882C-4992-AF60-C4BEEF63D44D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{34120CEF-882C-4992-AF60-C4BEEF63D44D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA17EC1F-66FA-4C04-893F-FAEC96EDF806}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA17EC1F-66FA-4C04-893F-FAEC96EDF806}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA17EC1F-66FA-4C04-893F-FAEC96EDF806}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA17EC1F-66FA-4C04-893F-FAEC96EDF806}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -62,6 +68,7 @@ Global
 		{45593F25-49AA-4456-AF85-10200C03E47D} = {9EE66006-E250-4471-9C0A-420A21A1AAD9}
 		{BB9C069F-9207-4DB4-861D-FFD20100BC88} = {F566E995-6EC7-49DD-A9C8-02B668365BB1}
 		{9C9E98FE-15C9-4010-8077-457945BA68A7} = {8F48349F-7206-4D9D-9C9C-DB408E985D3F}
+		{CA17EC1F-66FA-4C04-893F-FAEC96EDF806} = {F566E995-6EC7-49DD-A9C8-02B668365BB1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0BEB49FD-CA85-484B-9AA8-B466D2AF7B67}

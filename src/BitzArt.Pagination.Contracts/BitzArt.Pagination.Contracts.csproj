@@ -1,11 +1,11 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
 	<TargetFramework>net6.0</TargetFramework>
     <RootNamespace>BitzArt.Pagination</RootNamespace>
-    <AssemblyName>BitzArt.Pagination</AssemblyName>
+    <AssemblyName>BitzArt.Pagination.Contracts</AssemblyName>
 
-    <PackageId>BitzArt.Pagination</PackageId>
+    <PackageId>BitzArt.Pagination.Contracts</PackageId>
     <Authors>BitzArt</Authors>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/BitzArt/Pagination</RepositoryUrl>
