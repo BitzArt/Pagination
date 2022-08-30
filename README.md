@@ -8,7 +8,10 @@ You can use this library on IEnumerable interface. Just add this nuget package
 
 https://www.nuget.org/packages/BitzArt.Pagination
 
-Call .ToPage() method on an enumerable to get a PageResult.
+Getting a page of items:
+```csharp
+list.ToPage(offset, limit)
+```
 
 # Use with EF Core
 
@@ -17,8 +20,12 @@ https://www.nuget.org/packages/BitzArt.Pagination.EntityFrameworkCore/
 
 Assuming that you have a DbContext with some entity like
 
-    DbSet<SomeEntity> Items { get; set; }
+```csharp
+DbSet<SomeEntity> Items { get; set; }
+```
 
 Example of creating paged result:
 
-    var result = await dbContext.Items.ToPageAsync(0, 10);
+```csharp
+var result = await dbContext.Items.ToPageAsync(0, 10);
+```
