@@ -7,25 +7,12 @@ namespace BitzArt.Pagination.EntityFrameworkCore
 {
     public class InMemoryContext : DbContext
     {
-        private static InMemoryContext instance { get; set; } = null;
+        public InMemoryContext() { }
 
-        public static InMemoryContext Instance
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            get
-            {
-                if (instance == null) instance = new InMemoryContext();
-                return instance;
-            }
+            modelBuilder.Entity<TestEntity>();
         }
-
-        public DbSet<User> Users { get; set; }
-
-        public InMemoryContext()
-        {
-            Database.EnsureCreated();
-        }
-
-        private static bool Created { get; set; } = false;
 
         protected override void OnConfiguring(DbContextOptionsBuilder options) => options.UseSqlite(CreateDb());
 

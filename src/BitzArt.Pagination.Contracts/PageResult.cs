@@ -1,50 +1,34 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace BitzArt.Pagination
+namespace BitzArt.Pagination;
+
+public class PageResult<T>
 {
-    public class PageResult<T> : PageResult
+    [JsonPropertyName("request")]
+    public PageRequest? Request { get; set; }
+
+    [JsonPropertyName("count")]
+    public int Count { get; set; }
+
+    [JsonPropertyName("total")]
+    public int Total { get; set; }
+
+    [JsonPropertyName("data")]
+    public IEnumerable<T> Data { get; set; }
+
+    private PageResult()
     {
-        [JsonPropertyName("data")]
-        public new IEnumerable<T> Data
-        {
-            get => base.Data.Cast<T>();
-            set => base.Data = value.Cast<object>();
-        }
-
-        public PageResult() { }
-
-        public PageResult(IEnumerable<T> data, int offset, int limit, int total)
-            : this(data, new PageRequest(offset, limit), total) { }
-
-        public PageResult(IEnumerable<T> data, PageRequest request, int total)
-            : base(data.Cast<object>(), request, total) { }
+        Data = new List<T>();
     }
 
-    public class PageResult
+    public PageResult(IEnumerable<T> data, int offset, int limit, int total)
+        : this(data, new PageRequest(offset, limit), total) { }
+
+    public PageResult(IEnumerable<T> data, PageRequest? request, int total)
     {
-        [JsonPropertyName("request")]
-        public PageRequest Request { get; set; }
-
-        [JsonPropertyName("count")]
-        public int Count { get; set; }
-
-        [JsonPropertyName("total")]
-        public int Total { get; set; }
-
-        [JsonPropertyName("data")]
-        public IEnumerable<object> Data { get; set; }
-
-        private protected PageResult() { }
-
-        public PageResult(IEnumerable<object> data, int offset, int limit, int total)
-            : this(data, new PageRequest(offset, limit), total) { }
-
-        public PageResult(IEnumerable<object> data, PageRequest request, int total)
-        {
-            Data = data;
-            Count = Data.Count();
-            Request = request;
-            Total = total;
-        }
+        Data = data;
+        Count = Data.Count();
+        Request = request;
+        Total = total;
     }
 }

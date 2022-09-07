@@ -1,19 +1,24 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
 
-    <PackageId>BitzArt.Pagination.EntityFrameworkCore</PackageId>
-    <Authors>BitzArt</Authors>
-    <RepositoryType>git</RepositoryType>
-    <RepositoryUrl>https://github.com/BitzArt/Pagination</RepositoryUrl>
-    <RootNamespace>BitzArt.Pagination.EntityFrameworkCore</RootNamespace>
-    <AssemblyName>BitzArt.Pagination.Implementations.EntityFrameworkCore</AssemblyName>
-  </PropertyGroup>
+		<PackageId>BitzArt.Pagination.EntityFrameworkCore</PackageId>
+		<Authors>BitzArt</Authors>
+		<RepositoryType>git</RepositoryType>
+		<RepositoryUrl>https://github.com/BitzArt/Pagination</RepositoryUrl>
+		<RootNamespace>BitzArt.Pagination.EntityFrameworkCore</RootNamespace>
+		<AssemblyName>BitzArt.Pagination.Implementations.EntityFrameworkCore</AssemblyName>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="BitzArt.Pagination" Version="1.9.0" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.0" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\BitzArt.Pagination\BitzArt.Pagination.csproj" />
+	</ItemGroup>
 
 </Project>
