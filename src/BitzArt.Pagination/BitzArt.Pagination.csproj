@@ -5,6 +5,7 @@
 		<RootNamespace>BitzArt.Pagination</RootNamespace>
 		<AssemblyName>BitzArt.Pagination</AssemblyName>
 		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
 
 		<PackageId>BitzArt.Pagination</PackageId>
 		<Authors>BitzArt</Authors>
@@ -13,7 +14,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="BitzArt.Pagination.Contracts" Version="1.9.0" />
+	  <ProjectReference Include="..\BitzArt.Pagination.Contracts\BitzArt.Pagination.Contracts.csproj" />
 	</ItemGroup>
 
 </Project>

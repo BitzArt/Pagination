@@ -5,6 +5,7 @@
 		<RootNamespace>BitzArt.Pagination</RootNamespace>
 		<AssemblyName>BitzArt.Pagination.Contracts</AssemblyName>
 		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
 
 		<PackageId>BitzArt.Pagination.Contracts</PackageId>
 		<Authors>BitzArt</Authors>

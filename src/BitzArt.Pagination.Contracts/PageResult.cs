@@ -2,25 +2,7 @@
 
 namespace BitzArt.Pagination
 {
-    public class PageResult<T> : PageResult
-    {
-        [JsonPropertyName("data")]
-        public new IEnumerable<T> Data
-        {
-            get => base.Data.Cast<T>();
-            set => base.Data = value.Cast<object>();
-        }
-
-        public PageResult() { }
-
-        public PageResult(IEnumerable<T> data, int offset, int limit, int total)
-            : this(data, new PageRequest(offset, limit), total) { }
-
-        public PageResult(IEnumerable<T> data, PageRequest request, int total)
-            : base(data.Cast<object>(), request, total) { }
-    }
-
-    public class PageResult
+    public class PageResult<T>
     {
         [JsonPropertyName("request")]
         public PageRequest Request { get; set; }
@@ -32,14 +14,14 @@ namespace BitzArt.Pagination
         public int Total { get; set; }
 
         [JsonPropertyName("data")]
-        public IEnumerable<object> Data { get; set; }
+        public IEnumerable<T> Data { get; set; }
 
-        private protected PageResult() { }
+        private PageResult() { }
 
-        public PageResult(IEnumerable<object> data, int offset, int limit, int total)
+        public PageResult(IEnumerable<T> data, int offset, int limit, int total)
             : this(data, new PageRequest(offset, limit), total) { }
 
-        public PageResult(IEnumerable<object> data, PageRequest request, int total)
+        public PageResult(IEnumerable<T> data, PageRequest request, int total)
         {
             Data = data;
             Count = Data.Count();
