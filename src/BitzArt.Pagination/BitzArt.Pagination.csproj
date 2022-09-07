@@ -14,7 +14,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\BitzArt.Pagination.Contracts\BitzArt.Pagination.Contracts.csproj" />
+	  <PackageReference Include="BitzArt.Pagination.Contracts" Version="1.10.0" />
 	</ItemGroup>
 
 </Project>
