@@ -6,7 +6,9 @@
 
 You can use this library on IEnumerable interface. Just add this nuget package
 
-https://www.nuget.org/packages/BitzArt.Pagination
+```
+dotnet add package BitzArt.Pagination
+```
 
 Getting a page of items:
 ```csharp
@@ -16,7 +18,9 @@ list.ToPage(offset, limit)
 # Use with EF Core
 
 Add a nuget package to your project:
-https://www.nuget.org/packages/BitzArt.Pagination.EntityFrameworkCore/
+```
+dotnet add package BitzArt.Pagination.EntityFrameworkCore
+```
 
 Assuming that you have a DbContext with some entity like
 
