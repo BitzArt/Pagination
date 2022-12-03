@@ -9,6 +9,7 @@
 
 		<PackageId>BitzArt.Pagination.Contracts</PackageId>
 		<Authors>BitzArt</Authors>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<RepositoryType>git</RepositoryType>
 		<RepositoryUrl>https://github.com/BitzArt/Pagination</RepositoryUrl>
 	</PropertyGroup>

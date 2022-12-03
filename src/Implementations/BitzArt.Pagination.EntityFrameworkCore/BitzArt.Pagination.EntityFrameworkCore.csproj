@@ -5,6 +5,7 @@
 
 		<PackageId>BitzArt.Pagination.EntityFrameworkCore</PackageId>
 		<Authors>BitzArt</Authors>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<RepositoryType>git</RepositoryType>
 		<RepositoryUrl>https://github.com/BitzArt/Pagination</RepositoryUrl>
 		<RootNamespace>BitzArt.Pagination.EntityFrameworkCore</RootNamespace>
