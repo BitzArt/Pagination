@@ -29,7 +29,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Implementations", "Implemen
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Implementations", "Implementations", "{9C9E98FE-15C9-4010-8077-457945BA68A7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitzArt.Pagination.Contracts", "src\BitzArt.Pagination.Contracts\BitzArt.Pagination.Contracts.csproj", "{CA17EC1F-66FA-4C04-893F-FAEC96EDF806}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitzArt.Pagination.Contracts", "src\BitzArt.Pagination.Contracts\BitzArt.Pagination.Contracts.csproj", "{CA17EC1F-66FA-4C04-893F-FAEC96EDF806}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
