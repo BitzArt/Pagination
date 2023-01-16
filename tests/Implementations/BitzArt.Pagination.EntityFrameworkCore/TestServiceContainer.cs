@@ -18,7 +18,7 @@ namespace BitzArt.Pagination.EntityFrameworkCore
 
         private void GenerateEntities(int count)
         {
-            for (int i = 0; i < count; i++) Db.Set<TestEntity>().Add(new TestEntity());
+            for (int i = 0; i < count; i++) Db.Add(new TestEntity());
             Db.SaveChanges();
         }
     }

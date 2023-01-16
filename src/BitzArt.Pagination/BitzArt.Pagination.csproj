@@ -14,8 +14,4 @@
 		<RepositoryUrl>https://github.com/BitzArt/Pagination</RepositoryUrl>
 	</PropertyGroup>
 
-	<ItemGroup>
-	  <PackageReference Include="BitzArt.Pagination.Contracts" Version="1.12.0" />
-	</ItemGroup>
-
 </Project>

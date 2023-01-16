@@ -17,7 +17,7 @@ namespace BitzArt.Pagination.EntityFrameworkCore
         protected override void OnConfiguring(DbContextOptionsBuilder options) => options.UseSqlite(CreateDb());
 
         private static DbConnection Connection { get; set; }
-        private DbConnection CreateDb()
+        private static DbConnection CreateDb()
         {
             Connection = new SqliteConnection("Filename=:memory:");
             Connection.Open();

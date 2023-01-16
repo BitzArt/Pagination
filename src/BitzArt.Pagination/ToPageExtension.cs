@@ -9,7 +9,10 @@ public static class ToPageExtension
 
     public static PageResult<T> ToPage<T>(this IEnumerable<T> query, PageRequest request)
     {
-        var data = query.Skip(request.Offset).Take(request.Limit).AsEnumerable();
+        if (request.Offset is null) throw new ArgumentException("Offset is null");
+        if (request.Limit is null) throw new ArgumentException("Limit is null");
+
+        var data = query.Skip(request.Offset.Value).Take(request.Limit.Value);
         var total = query.Count();
 
         return new PageResult<T>(data, request, total);
