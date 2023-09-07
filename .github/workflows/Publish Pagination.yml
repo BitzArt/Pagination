@@ -4,7 +4,7 @@ on:
   repository_dispatch:
   push:
     tags:
-    - "Pagination-v[0-9]+.[0-9]+.[0-9]+"
+    - "Pagination-v[0-9]+.[0-9]+.[0-9]+*"
 
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -12,8 +12,8 @@ env:
 
 jobs:
 
-  Pagination:
-    name: Pagination
+  Release:
+    name: Release
     runs-on: ubuntu-latest
     steps:
 
@@ -30,8 +30,10 @@ jobs:
 
       - name: Build
         run: |
-          dotnet build src/BitzArt.Pagination/BitzArt.Pagination.csproj --configuration Release /p:Version=${VERSION}
-          dotnet pack src/BitzArt.Pagination/BitzArt.Pagination.csproj --configuration Release /p:Version=${VERSION} --no-build --output .
+          dotnet build Pagination.sln --configuration Release /p:Version=${VERSION}
+          dotnet pack Pagination.sln --configuration Release /p:Version=${VERSION} --no-build --output .
 
       - name: Push
-        run: dotnet nuget push BitzArt.Pagination.${VERSION}.nupkg --source https://api.nuget.org/v3/index.json --api-key ${NUGET_APIKEY}
+        run: |
+          dotnet nuget push BitzArt.Pagination.${VERSION}.nupkg --source https://api.nuget.org/v3/index.json --api-key ${NUGET_APIKEY}
+          dotnet nuget push BitzArt.Pagination.EntityFrameworkCore.${VERSION}.nupkg --source https://api.nuget.org/v3/index.json --api-key ${NUGET_APIKEY}
