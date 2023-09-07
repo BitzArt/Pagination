@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\src\Implementations\BitzArt.Pagination.EntityFrameworkCore\BitzArt.Pagination.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\..\src\BitzArt.Pagination.EntityFrameworkCore\BitzArt.Pagination.EntityFrameworkCore.csproj" />
   </ItemGroup>
 
 </Project>

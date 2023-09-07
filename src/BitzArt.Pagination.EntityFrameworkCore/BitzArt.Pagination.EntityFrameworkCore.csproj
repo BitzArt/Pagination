@@ -2,21 +2,26 @@
 
 	<PropertyGroup>
 		<TargetFrameworks>net6.0;net7.0</TargetFrameworks>
+		<RootNamespace>BitzArt.Pagination.EntityFrameworkCore</RootNamespace>
+		<AssemblyName>BitzArt.Pagination.EntityFrameworkCore</AssemblyName>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
 
 		<PackageId>BitzArt.Pagination.EntityFrameworkCore</PackageId>
+		<Description>EF Core Pagination implementation</Description>
 		<Authors>BitzArt</Authors>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<RepositoryType>git</RepositoryType>
 		<RepositoryUrl>https://github.com/BitzArt/Pagination</RepositoryUrl>
-		<RootNamespace>BitzArt.Pagination.EntityFrameworkCore</RootNamespace>
-		<AssemblyName>BitzArt.Pagination.Implementations.EntityFrameworkCore</AssemblyName>
-		<ImplicitUsings>enable</ImplicitUsings>
-		<Nullable>enable</Nullable>
+		<PackageProjectUrl>https://github.com/BitzArt/Pagination</PackageProjectUrl>
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="BitzArt.Pagination" Version="1.13.0" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\BitzArt.Pagination\BitzArt.Pagination.csproj" />
 	</ItemGroup>
 
 </Project>

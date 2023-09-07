@@ -8,10 +8,20 @@
 		<Nullable>enable</Nullable>
 
 		<PackageId>BitzArt.Pagination</PackageId>
+		<Description>A lightweight library to easily create pages of items</Description>
 		<Authors>BitzArt</Authors>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<RepositoryType>git</RepositoryType>
 		<RepositoryUrl>https://github.com/BitzArt/Pagination</RepositoryUrl>
+		<PackageProjectUrl>https://github.com/BitzArt/Pagination</PackageProjectUrl>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
 	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="..\..\README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
 
 </Project>
