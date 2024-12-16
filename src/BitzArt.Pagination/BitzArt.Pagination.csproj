@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>net6.0;net7.0</TargetFrameworks>
+		<TargetFrameworks>net6.0;net7.0;net8.0;net9.0</TargetFrameworks>
 		<RootNamespace>BitzArt.Pagination</RootNamespace>
 		<AssemblyName>BitzArt.Pagination</AssemblyName>
 		<ImplicitUsings>enable</ImplicitUsings>
@@ -20,6 +20,7 @@
 	<ItemGroup>
 		<None Include="..\..\README.md">
 			<Pack>True</Pack>
+			<Visible>False</Visible>
 			<PackagePath>\</PackagePath>
 		</None>
 	</ItemGroup>
