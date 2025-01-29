@@ -6,6 +6,7 @@
 		<AssemblyName>BitzArt.Pagination.EntityFrameworkCore</AssemblyName>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
 
 		<PackageId>BitzArt.Pagination.EntityFrameworkCore</PackageId>
 		<Description>EF Core Pagination implementation</Description>

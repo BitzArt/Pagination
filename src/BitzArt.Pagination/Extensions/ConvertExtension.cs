@@ -1,5 +1,8 @@
 ﻿namespace BitzArt.Pagination;
 
+/// <summary>
+/// Extension methods for converting PageResult data
+/// </summary>
 public static class ConvertExtension
 {
     /// <summary>

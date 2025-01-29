@@ -6,6 +6,7 @@
 		<AssemblyName>BitzArt.Pagination</AssemblyName>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
 
 		<PackageId>BitzArt.Pagination</PackageId>
 		<Description>A lightweight library to easily create pages of items</Description>
