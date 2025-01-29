@@ -20,11 +20,11 @@ namespace BitzArt.Pagination.Tests
             Assert.Equal(total, result.Total);
             Assert.Equal(offset, result.Request.Offset);
             Assert.Equal(limit, result.Request.Limit);
-            Assert.Equal(result.Data.Count(), result.Count);
+            Assert.Equal(result.Items.Count(), result.Count);
 
             if (result.Count == 0) return;
 
-            Assert.Equal(list.ElementAt(offset), result.Data.First());
+            Assert.Equal(list.ElementAt(offset), result.Items.First());
         }
     }
 }

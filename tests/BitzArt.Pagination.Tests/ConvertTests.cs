@@ -19,8 +19,8 @@ namespace BitzArt.Pagination.Tests
 
             for (int i = 0; i < count; i++)
             {
-                var source = sourcePage.Data.ElementAt(i);
-                var result = resultPage.Data.ElementAt(i);
+                var source = sourcePage.Items.ElementAt(i);
+                var result = resultPage.Items.ElementAt(i);
 
                 Assert.Equal(source, result.Source);
                 Assert.Equal(source.Name, result.Source.Name);
