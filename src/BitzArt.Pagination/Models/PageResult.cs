@@ -23,23 +23,8 @@ public class PageResult<T>
     [JsonPropertyName("total")]
     public int? Total { get; set; }
 
-    [JsonIgnore]
-    private IEnumerable<T>? _items;
-
-    [Obsolete("Use 'PageResult.Items' instead.", false)]
-    [JsonPropertyName("data")]
-    public IEnumerable<T>? Data
-    {
-        get => _items;
-        set => _items = value;
-    }
-
     [JsonPropertyName("items")]
-    public IEnumerable<T>? Items
-    {
-        get => _items;
-        set => _items = value;
-    }
+    public IEnumerable<T>? Items { get; set; }
 
     public PageResult(IEnumerable<T> items, int? offset, int? limit, int? total)
         : this(items, new PageRequest(offset, limit), total) { }
@@ -47,7 +32,7 @@ public class PageResult<T>
     public PageResult(IEnumerable<T>? items, PageRequest? request, int? total) : this()
     {
         Items = items;
-        Count = Items?.Count();
+        Count = items?.Count();
         Request = request;
         Total = total;
     }
