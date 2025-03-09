@@ -8,7 +8,7 @@ public class PageResult : PageResult<object>
         : this(items, new PageRequest(offset, limit), total) { }
 
     /// <inheritdoc/>
-    public PageResult(IEnumerable<object>? items, IPageRequest? request, int? total)
+    public PageResult(IEnumerable<object>? items, PageRequest? request, int? total)
         : base(items, request, total) { }
 
     /// <inheritdoc/>

@@ -6,13 +6,15 @@ namespace BitzArt.Pagination;
 /// A page of items.
 /// </summary>
 /// <typeparam name="T">Item type.</typeparam>
-public class PageResult<T>
+/// <typeparam name="TRequest">Page request type.</typeparam>
+public class PageResult<T, TRequest>
+    where TRequest : IPageRequest
 {
     /// <summary>
     /// The request used to generate this page.
     /// </summary>
     [JsonPropertyName("request")]
-    public IPageRequest? Request { get; set; }
+    public TRequest? Request { get; set; }
 
     /// <summary>
     /// The number of items in this page.
@@ -33,22 +35,12 @@ public class PageResult<T>
     public IEnumerable<T>? Items { get; set; }
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="PageResult{T}"/> class.
-    /// </summary>
-    /// <param name="items">Page items.</param>
-    /// <param name="offset">Requested page offset.</param>
-    /// <param name="limit">Requested page limit.</param>
-    /// <param name="total">Total number of items available.</param>
-    public PageResult(IEnumerable<T> items, int offset, int limit, int? total)
-        : this(items, new PageRequest(offset, limit), total) { }
-
-    /// <summary>
-    /// Initializes a new instance of the <see cref="PageResult{T}"/> class.
+    /// Initializes a new instance of the <see cref="PageResult{T,TPageRequest}"/> class.
     /// </summary>
     /// <param name="items">Page items.</param>
     /// <param name="request">The request used to generate this page.</param>
     /// <param name="total">Total number of items available.</param>
-    public PageResult(IEnumerable<T>? items, IPageRequest? request, int? total) : this()
+    public PageResult(IEnumerable<T>? items, TRequest? request, int? total) : this()
     {
         Items = items;
         Count = items?.Count();
@@ -57,7 +49,7 @@ public class PageResult<T>
     }
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="PageResult{T}"/> class.
+    /// Initializes a new instance of the <see cref="PageResult{T,TPageRequest}"/> class.
     /// </summary>
     public PageResult() { }
 }

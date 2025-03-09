@@ -8,9 +8,10 @@ public static class ConvertExtension
     /// <summary>
     /// Converts the Data of a PageResult using a selector
     /// </summary>
-    public static PageResult<TResult> Convert<TSource, TResult>(this PageResult<TSource> source, Func<TSource, TResult> selector)
+    public static PageResult<TResult, TRequest> Convert<TSource, TRequest, TResult>(this PageResult<TSource, TRequest> initial, Func<TSource, TResult> selector)
+        where TRequest : IPageRequest
     {
-        var data = source.Items!.Select(selector);
-        return new PageResult<TResult>(data, source.Request, source.Total);
+        var data = initial.Items!.Select(selector);
+        return new PageResult<TResult, TRequest>(data, initial.Request, initial.Total);
     }
 }

@@ -43,4 +43,10 @@ public class PageRequest : IPageRequest
     /// <inheritdoc/>
     public IQueryable<TSource> ApplyConstraints<TSource>(IQueryable<TSource> query)
         => query.Skip(Offset).Take(Limit);
+
+    /// <inheritdoc/>
+    public override string ToString()
+    {
+        return $"Offset: {Offset}, Limit: {Limit}";
+    }
 }
