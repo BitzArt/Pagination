@@ -29,14 +29,10 @@ public static class ToPageAsyncExtension
     /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
     /// <exception cref="ArgumentException">Offset is null or Limit is null.</exception>
-    public static async Task<PageResult<T>> ToPageAsync<T>(this IQueryable<T> query, PageRequest request, CancellationToken cancellationToken = default)
+    public static async Task<PageResult<T>> ToPageAsync<T>(this IQueryable<T> query, IPageRequest request, CancellationToken cancellationToken = default)
     {
-        if (request.Offset is null) throw new ArgumentException("Offset is null");
-        if (request.Limit is null) throw new ArgumentException("Limit is null");
-
-        var data = await query
-            .Skip(request.Offset.Value)
-            .Take(request.Limit.Value)
+        var data = await request
+            .ApplyConstraints(query)
             .ToListAsync(cancellationToken);
 
         var total = await query.CountAsync(cancellationToken);
