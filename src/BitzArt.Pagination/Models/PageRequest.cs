@@ -8,29 +8,28 @@ namespace BitzArt.Pagination;
 public class PageRequest : IPageRequest
 {
     /// <summary>
+    /// Default limit if not specified in the request.
+    /// </summary>
+    protected virtual int DefaultLimit => 100;
+
+    /// <summary>
     /// Requested page offset.
     /// </summary>
     [JsonPropertyName("offset")]
-    public int Offset { get; set; }
+    public int? Offset { get; set; }
 
     /// <summary>
     /// Requested page limit.
     /// </summary>
     [JsonPropertyName("limit")]
-    public int Limit { get; set; }
-
-
-    /// <summary>
-    /// Initializes a new instance of the <see cref="PageRequest"/> class.
-    /// </summary>
-    public PageRequest() : this(0, 100) { }
+    public int? Limit { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the <see cref="PageRequest"/> class.
     /// </summary>
     /// <param name="offset">Requested page offset</param>
     /// <param name="limit">Requested page limit</param>
-    public PageRequest(int offset, int limit)
+    public PageRequest(int? offset = null, int? limit = null)
     {
         Offset = offset;
         Limit = limit;
@@ -38,11 +37,33 @@ public class PageRequest : IPageRequest
 
     /// <inheritdoc/>
     public IEnumerable<TSource> ApplyConstraints<TSource>(IEnumerable<TSource> query)
-        => query.Skip(Offset).Take(Limit);
+    {
+        if (Offset is not null)
+        {
+            query = query.Skip(Offset!.Value);
+        }
+
+        query = Limit is not null
+            ? query.Take(Limit!.Value)
+            : query.Take(DefaultLimit);
+
+        return query;
+    }
 
     /// <inheritdoc/>
     public IQueryable<TSource> ApplyConstraints<TSource>(IQueryable<TSource> query)
-        => query.Skip(Offset).Take(Limit);
+    {
+        if (Offset is not null)
+        {
+            query = query.Skip(Offset!.Value);
+        }
+
+        query = Limit is not null
+            ? query.Take(Limit!.Value)
+            : query.Take(DefaultLimit);
+
+        return query;
+    }
 
     /// <inheritdoc/>
     public override string ToString()
