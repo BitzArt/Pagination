@@ -27,8 +27,8 @@ public class PageRequest : IPageRequest
     /// <summary>
     /// Initializes a new instance of the <see cref="PageRequest"/> class.
     /// </summary>
-    /// <param name="offset">Requested page offset</param>
-    /// <param name="limit">Requested page limit</param>
+    /// <param name="offset">Requested page offset. If <c>null</c>, defaults to <c>0</c>.</param>
+    /// <param name="limit">Requested page limit. If <c>null</c>, defaults to <see cref="DefaultLimit"/>.</param>
     public PageRequest(int? offset = null, int? limit = null)
     {
         Offset = offset;
