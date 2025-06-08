@@ -12,6 +12,15 @@ public static class ConvertExtension
         where TRequest : IPageRequest
     {
         var data = initial.Items!.Select(selector);
-        return new PageResult<TResult, TRequest>(data, initial.Request, initial.Total);
+        return new PageResult<TResult, TRequest>(data, initial.Request, initial.Total, initial.Count);
+    }
+
+    /// <summary>
+    /// Converts the Data of a PageResult using a selector
+    /// </summary>
+    public static PageResult<TResult> Convert<TSource, TResult>(this PageResult<TSource> initial, Func<TSource, TResult> selector)
+    {
+        var data = initial.Items!.Select(selector);
+        return new PageResult<TResult>(data, initial.Total, initial.Count);
     }
 }
