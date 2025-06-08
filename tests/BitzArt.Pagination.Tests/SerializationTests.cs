@@ -22,7 +22,7 @@ public class SerializationTests
         var json = JsonSerializer.Serialize(page);
 
         // Act
-        var result = JsonSerializer.Deserialize<PageResult<int>>(json);
+        var result = JsonSerializer.Deserialize<PageResult<int, PageRequest>>(json);
 
         // Assert
         Assert.NotNull(result);
