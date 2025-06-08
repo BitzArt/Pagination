@@ -66,8 +66,5 @@ public class PageRequest : IPageRequest
     }
 
     /// <inheritdoc/>
-    public override string ToString()
-    {
-        return $"Offset: {Offset}, Limit: {Limit}";
-    }
+    public override string ToString() => $"Offset: {Offset}, Limit: {Limit}";
 }

@@ -1,16 +1,15 @@
-﻿namespace BitzArt.Pagination;
+﻿using System.Text.Json.Serialization;
 
-/// <inheritdoc/>
-public class PageResult : PageResult<object>
+namespace BitzArt.Pagination;
+
+/// <inheritdoc cref="PageResult{T}"/>
+public abstract class PageResult
 {
-    /// <inheritdoc cref="PageResult{T}(IEnumerable{T},int,int,int?)"/>"
-    public PageResult(IEnumerable<object>? items, int offset, int limit, int? total)
-        : this(items, new PageRequest(offset, limit), total) { }
+    /// <inheritdoc/>
+    [JsonPropertyName("count")]
+    public int? Count { get; set; }
 
     /// <inheritdoc/>
-    public PageResult(IEnumerable<object>? items, PageRequest? request, int? total)
-        : base(items, request, total) { }
-
-    /// <inheritdoc/>
-    public PageResult() : base() { }
+    [JsonPropertyName("total")]
+    public int? Total { get; set; }
 }

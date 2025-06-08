@@ -1,34 +1,32 @@
-﻿namespace BitzArt.Pagination;
+﻿using System.Text.Json.Serialization;
 
-/// <inheritdoc/>
-public class PageResult<T> : PageResult<T, PageRequest>
+namespace BitzArt.Pagination;
+
+/// <inheritdoc cref="PageResult{T, TRequest}"/>
+public class PageResult<T> : PageResult
 {
     /// <summary>
-    /// Initializes a new instance of the <see cref="PageResult{T,TPageRequest}"/> class.
+    /// The items in this page.
     /// </summary>
-    /// <param name="items">Page items.</param>
-    /// <param name="offset">Requested page offset.</param>
-    /// <param name="limit">Requested page limit.</param>
-    /// <param name="total">Total number of items available.</param>
-    public PageResult(IEnumerable<T> items, int offset, int limit, int? total)
-        : base(items, new PageRequest(offset, limit), total) { }
+    [JsonPropertyName("items")]
+    public IEnumerable<T>? Items { get; set; }
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="PageResult{T,TPageRequest}"/> class.
+    /// Initializes a new instance of the <see cref="PageResult{T}"/> class.
     /// </summary>
     /// <param name="items">Page items.</param>
-    /// <param name="request">The request used to generate this page.</param>
     /// <param name="total">Total number of items available.</param>
-    public PageResult(IEnumerable<T>? items, PageRequest? request, int? total) : this()
+    /// <param name="count">Number of items in this page. If <see langword="null"/> is provided, will use <paramref name="items"/> count.</param>
+    public PageResult(IEnumerable<T>? items, int? total, int? count = null) : this()
     {
         Items = items;
-        Count = items?.Count();
-        Request = request;
+        Count = count ?? items?.Count();
         Total = total;
     }
 
     /// <summary>
     /// Initializes a new instance of the <see cref="PageResult{T,TPageRequest}"/> class.
     /// </summary>
-    public PageResult() { }
+    [JsonConstructor]
+    protected PageResult() { }
 }
