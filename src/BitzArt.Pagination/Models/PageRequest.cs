@@ -35,6 +35,8 @@ public class PageRequest : IPageRequest
         Limit = limit;
     }
 
+    public PageRequest() { }
+
     /// <inheritdoc/>
     public IEnumerable<TSource> ApplyConstraints<TSource>(IEnumerable<TSource> query)
     {
