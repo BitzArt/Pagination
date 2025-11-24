@@ -12,8 +12,20 @@ public static class PageResultExtensions
     /// <param name="pageResult">The page result to evaluate.</param>
     /// <returns>Total number of pages in a <see cref="PageResult"/>.</returns>
     public static int GetPageCount<T>(this PageResult<T, PageRequest> pageResult)
-        => GetPageCount(pageResult.Total!.Value, pageResult.Request!.Limit!.Value);
-
+    {
+        if (pageResult.Request is null)
+        {
+            throw new InvalidOperationException("Unable to get page count: page request is null.");
+        }
+        
+        if (pageResult.Request.Limit is null)
+        {
+            throw new InvalidOperationException("Unable to get page count: limit is null.");
+        }
+        
+        return GetPageCount(pageResult.Total, pageResult.Request!.Limit!.Value);
+    } 
+    
     /// <summary>
     /// Gets the total number of pages using a specified page size.
     /// </summary>
@@ -21,7 +33,7 @@ public static class PageResultExtensions
     /// <param name="pageSize">Size of a page.</param>
     /// <returns>Total number of pages in a <see cref="PageResult"/>.</returns>
     public static int GetPageCount(this PageResult pageResult, int pageSize)
-        => GetPageCount(pageResult.Total!.Value, pageSize);
+        => GetPageCount(pageResult.Total, pageSize);
 
     /// <summary>
     /// Calculates the number of pages for the provided total item count and page size.
@@ -29,22 +41,14 @@ public static class PageResultExtensions
     /// <param name="totalItems">Total number of items.</param>
     /// <param name="pageSize">Number of items per page.</param>
     /// <returns>The calculated number of pages.</returns>
-    /// <exception cref="ArgumentOutOfRangeException">
-    /// Thrown when <paramref name="totalItems"/> is negative or
-    /// when <paramref name="pageSize"/> is less than or equal to zero.
-    /// </exception>
-    private static int GetPageCount(int totalItems, int pageSize)
+    private static int GetPageCount(int? totalItems, int pageSize) => totalItems switch
     {
-        if (totalItems < 0)
-        {
-            throw new ArgumentOutOfRangeException(nameof(totalItems), "Total items cannot be negative.");
-        }
-
-        if (pageSize <= 0)
-        {
-            throw new ArgumentOutOfRangeException(nameof(pageSize), "Page size must be greater than zero.");
-        }
-
-        return (int)Math.Ceiling((double)totalItems / pageSize);
-    }
+        null => throw new InvalidOperationException("Unable to get page count: total item count is null."),
+        
+        < 0 => throw new InvalidOperationException("Unable to get page count: total item count is negative."),
+        
+        _ when pageSize <= 0 => throw new InvalidOperationException($"Unable to get page count: page size '{pageSize}' is invalid."),
+        
+        _ => (int)Math.Ceiling((double)totalItems / pageSize)
+    };
 }
