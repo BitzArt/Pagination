@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>net6.0;net7.0;net8.0;net9.0</TargetFrameworks>
+		<TargetFrameworks>net6.0;net7.0;net8.0;net9.0;net10.0</TargetFrameworks>
 		<RootNamespace>BitzArt.Pagination</RootNamespace>
 		<AssemblyName>BitzArt.Pagination</AssemblyName>
 		<ImplicitUsings>enable</ImplicitUsings>
@@ -9,7 +9,7 @@
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
 
 		<PackageId>BitzArt.Pagination</PackageId>
-		<Description>A lightweight library to easily create pages of items</Description>
+		<Description>A lightweight library providing functionality to easily create pages of items.</Description>
 		<Authors>BitzArt</Authors>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<RepositoryType>git</RepositoryType>
