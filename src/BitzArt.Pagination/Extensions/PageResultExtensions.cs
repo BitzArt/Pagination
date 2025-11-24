@@ -6,11 +6,11 @@ namespace BitzArt.Pagination;
 public static class PageResultExtensions
 {
     /// <summary>
-    /// Gets the total number of pages using the <see cref="PageRequest.Limit"/> value.
+    /// Gets the total number of pages using <see cref="PageRequest.Limit"/>.
     /// </summary>
     /// <typeparam name="T">Type of items contained in the page result.</typeparam>
     /// <param name="pageResult">The page result to evaluate.</param>
-    /// <returns>The total number of pages.</returns>
+    /// <returns>Total number of pages in a <see cref="PageResult"/>.</returns>
     public static int GetPageCount<T>(this PageResult<T, PageRequest> pageResult)
         => GetPageCount(pageResult.Total!.Value, pageResult.Request!.Limit!.Value);
 
@@ -18,8 +18,8 @@ public static class PageResultExtensions
     /// Gets the total number of pages using a specified page size.
     /// </summary>
     /// <param name="pageResult">The page result containing total item count.</param>
-    /// <param name="pageSize">The size of a page.</param>
-    /// <returns>The total number of pages.</returns>
+    /// <param name="pageSize">Size of a page.</param>
+    /// <returns>Total number of pages in a <see cref="PageResult"/>.</returns>
     public static int GetPageCount(this PageResult pageResult, int pageSize)
         => GetPageCount(pageResult.Total!.Value, pageSize);
 
